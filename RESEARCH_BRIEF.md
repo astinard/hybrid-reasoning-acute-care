@@ -1,397 +1,467 @@
-# EXECUTIVE RESEARCH BRIEF: Hybrid Reasoning for Acute Care
-## Viability Assessment and Strategic Recommendations
+# ACADEMIC RESEARCH BRIEF: Hybrid Reasoning for Acute Care
+## University of Central Florida - Computer Science & College of Medicine
+## Interdisciplinary Research Direction Assessment
 
 **Date:** November 2025
-**Status:** Research Direction Decision Required
+**Prepared For:** UCF Department of Computer Science & UCF College of Medicine
+**Purpose:** Doctoral/Faculty Research Direction Viability Assessment
 
 ---
 
 ## EXECUTIVE SUMMARY
 
-After comprehensive analysis of 100+ papers, commercial solutions, and market dynamics across six technical domains, this brief provides a definitive assessment of the "Hybrid Reasoning for Acute Care: Temporal Knowledge Graphs and Clinical Constraints" research direction.
+This brief assesses the viability of "Hybrid Reasoning for Acute Care: Temporal Knowledge Graphs and Clinical Constraints" as an interdisciplinary research program between UCF Computer Science and UCF College of Medicine.
 
-### BOTTOM LINE RECOMMENDATION: **PROCEED WITH STAGED COMMITMENT**
+### RECOMMENDATION: **STRONG CANDIDATE FOR INTERDISCIPLINARY RESEARCH**
 
-The research direction is **scientifically sound and commercially viable**, but success requires:
-1. **Phase 1 focus on infrastructure** (temporal KG framework) over algorithms
-2. **Sepsis treatment optimization** as initial use case (not detection)
-3. **Academic medical center partnerships** for validation
-4. **$3-5M seed investment** with 18-month milestone gates
+This research direction offers:
+1. **High publication potential** across top venues (NeurIPS, ICML, JAMIA, Nature Digital Medicine)
+2. **Novel contributions** at intersection of knowledge representation, neural-symbolic AI, and clinical informatics
+3. **Natural interdisciplinary collaboration** between CS and Medicine
+4. **Access to public datasets** (MIMIC-III/IV, eICU) eliminating data access barriers
+5. **Alignment with NSF/NIH funding priorities** in trustworthy AI and clinical decision support
 
-**Success Probability:** 40-60% to meaningful clinical deployment within 5 years
-
----
-
-## PART 1: MARKET OPPORTUNITY
-
-### 1.1 Market Size and Growth
-
-| Metric | 2024 | 2030-2033 | CAGR |
-|--------|------|-----------|------|
-| AI in Healthcare Market | $14.9-29.0B | $110-504B | 38.6% |
-| Hybrid AI Market (US) | $2.5B | - | 23.4% |
-| Hospital AI Adoption | 71% | - | Growing |
-
-**Key Signal:** 71% of non-federal acute care hospitals now use predictive AI integrated into EHRs (up from 66% in 2023), indicating market readiness.
-
-### 1.2 Incumbent Vulnerabilities
-
-**Epic Sepsis Model Failure:**
-- **67% of sepsis cases missed** while alerting on 18% of all patients
-- AUC 0.63 (external validation) vs. claimed 0.76-0.83
-- Model "cheats" by using clinician actions as predictors
-- Creates massive alert fatigue (109 flagged patients per true positive)
-
-**IBM Watson Health Collapse:**
-- $4B+ invested, sold for parts at ~$1B
-- Technology generation "nowhere near ready"
-- Training data from Manhattan elite patients didn't generalize
-- Cautionary tale on marketing outpacing reality
-
-**Implication:** Market leader (Epic, 42.3% share) has demonstrably failed on sepsis prediction. IBM's failure creates skepticism but also opportunity for credible alternatives.
-
-### 1.3 Investment Climate
-
-- **$10.7B** invested in healthcare AI (2025 YTD)
-- Top VCs active: a16z, GV, General Catalyst, Kleiner Perkins
-- Mega-rounds: Abridge ($550M), Hippocratic AI ($126M, $3.5B valuation), Viz.ai ($1.2B unicorn)
-- **Neuro-symbolic AI gaining traction** as differentiation from "me-too" LLM plays
+**Estimated Timeline:** 3-5 years for dissertation-level contribution
+**Funding Sources:** NSF CAREER, NIH R01/R21, DoD CDMRP, industry partnerships
 
 ---
 
-## PART 2: TECHNICAL VIABILITY ASSESSMENT
+## PART 1: RESEARCH SIGNIFICANCE
 
-### 2.1 Temporal Knowledge Graphs
+### 1.1 Scientific Gaps Addressable
 
-**Viability: HIGH (8.4/10)**
+| Gap | Current State | UCF Contribution Potential |
+|-----|---------------|---------------------------|
+| Temporal clinical reasoning | Ad-hoc temporal encoding | Formal temporal KG framework with Allen's interval algebra |
+| Explainable acute care AI | Black-box models (67% miss rate for Epic sepsis) | Neuro-symbolic reasoning with interpretable decision paths |
+| Benchmark standardization | Fragmented evaluation protocols | Unified temporal clinical benchmarks |
+| Multi-modal fusion | Separate modality processing | KG-scaffolded integration architecture |
 
-| Aspect | Finding | Implication |
-|--------|---------|-------------|
-| Performance | RGCN+Literals: AUC 0.91 vs. 0.71 tabular | 20-point improvement validates approach |
-| Schema Design | More important than temporal encoding | Focus on ontology, not deep learning tricks |
-| Production Gap | Mostly research prototypes | First-mover advantage available |
-| Standards | SPHN, CARE-SM, OWL-Time mature | Build on existing infrastructure |
+### 1.2 Why This Problem Matters
 
-**Key Insight (Jhee et al. 2025):** Schema design matters more than temporal encoding complexity. The SPHN ontology significantly outperformed CARE-SM (AUC 0.91 vs 0.50) - invest in ontological foundations.
+**Clinical Impact:**
+- ED visits: 140M+ annually in US
+- Sepsis mortality: 270,000 deaths/year in US
+- Current AI systems failing: Epic Sepsis Model external validation shows AUC 0.63 vs claimed 0.76-0.83
 
-### 2.2 Neuro-Symbolic AI
+**Scientific Impact:**
+- Neuro-symbolic AI is experiencing resurgence (NeurIPS 2024 workshop, major industry adoption)
+- Temporal knowledge graphs remain under-explored in healthcare
+- Intersection of KR+R, ML, and clinical informatics is publication-rich
 
-**Viability: MODERATE-HIGH (7.0/10)**
+### 1.3 Alignment with UCF Strengths
 
-| Aspect | Finding | Implication |
-|--------|---------|-------------|
-| Accuracy | LNN: 80.52% accuracy, 0.8457 AUROC | Competitive with pure neural |
-| Explainability | Native reasoning chains | Major differentiator |
-| Clinical Trust | Learned thresholds match clinical knowledge | Builds physician confidence |
-| Adoption | Amazon, Infermedica deploying in 2025 | Timing is right |
+**UCF Computer Science:**
+- Strong AI/ML research groups
+- Knowledge representation expertise
+- NLP and healthcare informatics capabilities
 
-**Key Architecture:** Logical Neural Networks (LNNs) provide learnable parameters while maintaining first-order logic semantics:
-```
-LNN-∧(x, y) = max(0, min(1, β - w₁(1-x) - w₂(1-y)))
-```
+**UCF College of Medicine:**
+- Clinical partnerships with Orlando Health, AdventHealth, Nemours
+- Emergency medicine and critical care faculty
+- Access to clinical expertise for validation
 
-### 2.3 Diffusion Models for EHR
-
-**Viability: MODERATE (5.8/10)**
-
-| Aspect | Finding | Implication |
-|--------|---------|-------------|
-| Fidelity | MedDiff ρ=0.98 correlation | Superior to GANs |
-| Privacy | Empirical protection, not formal DP | Acceptable for research |
-| Temporal | 25-72 hour windows only | Insufficient for multi-day ICU |
-| Counterfactuals | Zero papers on clinical counterfactuals | Major research gap |
-
-**Recommendation:** Use for data augmentation, NOT clinical counterfactual reasoning. Long-term research direction with 5+ year horizon.
-
-### 2.4 Multimodal Fusion
-
-**Viability: MODERATE (6.5/10)**
-
-| Aspect | Finding | Implication |
-|--------|---------|-------------|
-| Performance Gain | 2-8% AUROC improvement | May not justify deployment cost |
-| Missing Modalities | Performance degrades significantly | ED data is inherently incomplete |
-| Real-time | Computational requirements high | Infrastructure investment needed |
-| Benchmarks | MIMIC-IV-ED, MC-BEC available | Evaluation possible |
-
-**Key Framework:** MINGLE (hypergraph + LLM) achieves 11.83% improvement through semantic integration.
-
-### 2.5 ICD Coding
-
-**Viability: LOW (4.5/10)**
-
-| Aspect | Finding | Implication |
-|--------|---------|-------------|
-| SOTA Performance | 60-62% micro-F1 | Far from 95%+ needed |
-| Rare Codes | 50%+ never predicted correctly | Fundamental data scarcity problem |
-| Generalization | Single-center training fails elsewhere | Multi-site validation essential |
-| Commercial | CAC (computer-assisted) only viable | Full automation not achievable |
-
-**Key Finding (Edin et al. 2023):** Prior work miscalculated macro-F1 and used flawed data splits. Corrected benchmarks show models are worse than reported.
-
-**Recommendation:** De-prioritize ICD coding as primary research focus. Limited competitive differentiation - the problem is data scarcity, not methodology.
-
-### 2.6 Privacy-Preserving ML
-
-**Viability: MODERATE (6.0/10) as INFRASTRUCTURE**
-
-| Aspect | Finding | Implication |
-|--------|---------|-------------|
-| Federated Learning | Fed-BioMed deployed in French cancer centers | Production-ready frameworks exist |
-| Differential Privacy | ε=3: 87.98% accuracy (6% loss) | Acceptable privacy-utility tradeoff |
-| Knowledge Distillation | 250x compression, <5% accuracy loss | Enables PHI-free deployment |
-| Cost | $500K-1M+ infrastructure | Significant upfront investment |
-
-**Recommendation:** Treat as enabling infrastructure, not standalone research focus. Build on Fed-BioMed for multi-institutional studies.
+**Interdisciplinary Opportunity:**
+- Joint CS-Medicine dissertations
+- Shared graduate students
+- Collaborative grant applications (NIH values interdisciplinary teams)
 
 ---
 
-## PART 3: COMPETITIVE POSITIONING
+## PART 2: LITERATURE LANDSCAPE
 
-### 3.1 Differentiation Matrix
+### 2.1 Publication Venue Analysis
 
-| Dimension | Deep Learning (Epic) | Rules-Based (CDSS) | Hybrid Reasoning (Proposed) |
-|-----------|---------------------|-------------------|---------------------------|
-| Explainability | Black box | Transparent | Native reasoning paths |
-| Accuracy | High but unreliable | Limited | Competitive |
-| Clinical Trust | Low (90%+ override) | High | High (expected) |
-| Adaptability | Learns patterns | Manual updates | Learns + constraints |
-| Safety | Statistical only | Hard rules | Verified recommendations |
-| Temporal Reasoning | Sequential patterns | None | Interval algebra |
+| Venue | Relevant Topics | Recent Acceptance Rate | Fit |
+|-------|-----------------|----------------------|-----|
+| **NeurIPS** | Neuro-symbolic AI, graph learning | ~26% | High |
+| **ICML** | Temporal models, representation learning | ~28% | High |
+| **KDD** | Healthcare AI, knowledge graphs | ~20% | High |
+| **AAAI** | Knowledge representation, clinical AI | ~23% | High |
+| **JAMIA** | Clinical informatics, decision support | ~15% | Very High |
+| **Nature Digital Medicine** | Healthcare AI applications | ~8% | High impact |
+| **npj Digital Medicine** | Clinical AI validation | ~12% | High impact |
+| **JMIR** | Health informatics | ~30% | Accessible |
 
-### 3.2 Unique Value Proposition
+### 2.2 Key Research Groups to Position Against/With
 
-**vs. Epic Sepsis Model:**
-> "Unlike black-box models that miss 2/3 of sepsis cases, our temporal knowledge graph provides explainable treatment recommendations validated across diverse populations, with override rates under 5%."
+| Group | Institution | Focus | Collaboration Potential |
+|-------|-------------|-------|------------------------|
+| Jimeng Sun Lab | UIUC | Healthcare AI, temporal modeling | High - complementary |
+| David Sontag Lab | MIT | Clinical ML, causal inference | Medium - competitive |
+| Nigam Shah Lab | Stanford | Clinical NLP, knowledge graphs | High - datasets |
+| Fei Wang Lab | Cornell | Healthcare AI, federated learning | High - complementary |
+| IBM Research | Industry | Neuro-symbolic AI, LNNs | High - framework access |
 
-**vs. Google/Microsoft (Documentation AI):**
-> "While LLMs excel at documentation, acute care decisions require hard safety constraints and temporal reasoning. Our hybrid approach prevents dangerous recommendations through clinical constraint verification."
+### 2.3 State-of-the-Art Performance Benchmarks
 
-### 3.3 Competitive Moats
+**Temporal Knowledge Graphs (Target to Beat):**
+- KAT-GNN (2024): AUROC 0.9269 for CAD prediction
+- RGCN+Literals (Jhee 2025): AUC 0.91 for outcome prediction
+- GraphCare (2023): Strong MIMIC-III/IV results
 
-1. **Clinical Knowledge Graph Asset:** Accumulates value through validation and refinement
-2. **Temporal Reasoning Engine:** Technical complexity as barrier to entry
-3. **Regulatory Expertise:** FDA relationships for AI/ML devices
-4. **EHR Integration Layer:** FHIR API expertise across Epic, Oracle Health
+**Neuro-Symbolic Clinical AI (Target to Beat):**
+- LNN Diabetes (Lu 2024): 80.52% accuracy, 0.8457 AUROC
+- NeuroSymAD (He 2025): 88.58% accuracy for Alzheimer's
 
----
-
-## PART 4: RESEARCH GAP PRIORITIZATION
-
-### 4.1 Ranked Research Directions
-
-| Rank | Direction | Impact | Tractability | Timeline | Risk |
-|------|-----------|--------|--------------|----------|------|
-| 1 | Temporal KG Infrastructure | 9/10 | 8/10 | 2 years | Low |
-| 2 | Neuro-Symbolic Multimodal | 8/10 | 6/10 | 3-4 years | Medium |
-| 3 | Constrained Generative Models | 7/10 | 4/10 | 5+ years | High |
-| 4 | Privacy-Preserving Infrastructure | 6/10 | 7/10 | 2-3 years | Low |
-
-### 4.2 Synergistic Research Agenda
-
-**Phase 1 (Years 1-2): Foundation**
-- Temporal KG infrastructure with real-time EHR integration
-- Neuro-symbolic framework for clinical guideline formalization
-- Open-source release for academic adoption
-
-**Phase 2 (Years 2-3): Integration**
-- Hybrid GNN-LNN architecture for unified reasoning
-- Multimodal fusion via KG scaffold
-- Clinician user studies for explanation validation
-
-**Phase 3 (Years 3-5): Deployment**
-- Multi-institutional validation (3+ hospital systems)
-- Prospective pilot in live ED environment
-- FDA 510(k) regulatory pathway
-
-### 4.3 Novel Contributions
-
-1. **Production-ready temporal KG framework** - First standardized, real-time system for acute care
-2. **Hybrid GNN-LNN architecture** - First system combining graph learning + logical reasoning for interpretable ED decision support
-3. **Physiologically-constrained generation** - First generative approach with causal guarantees (long-term)
+**ICD Coding (Context, not primary target):**
+- PLM-ICD: 60-62% micro-F1 (demonstrates ceiling of current approaches)
 
 ---
 
-## PART 5: RECOMMENDED USE CASE
+## PART 3: PROPOSED RESEARCH DIRECTIONS
 
-### 5.1 Why Sepsis Treatment Optimization (Not Detection)
+### 3.1 Dissertation-Level Research Questions
 
-| Factor | Detection (Current) | Treatment Optimization (Proposed) |
-|--------|---------------------|----------------------------------|
-| Competition | Crowded (Epic, Dascena, TREWS) | Wide open |
-| Technical Fit | Simple classification | Temporal reasoning required |
-| Clinical Impact | Earlier alerts | Better outcomes |
-| Regulatory | Many 510(k) cleared | Differentiated |
-| Differentiation | Low | High |
+**RQ1: Temporal Knowledge Graph Representation**
+> How can clinical event sequences be represented as temporal knowledge graphs that capture causal and temporal relationships while supporting real-time inference?
 
-### 5.2 Sepsis Treatment Optimization Components
+*Novelty:* First systematic framework for ED-specific temporal KGs with formal temporal semantics (Allen's interval algebra + OWL-Time)
 
-1. **Temporal KG:** Model antibiotic selection, source control timing, fluid management as interconnected clinical events
-2. **Clinical Constraints:** Resistance patterns, allergies, organ function as hard constraints
-3. **Neuro-Symbolic Reasoning:** Explain why specific antibiotic recommended
-4. **Outcome Optimization:** Time to appropriate therapy, antibiotic stewardship
+**RQ2: Neuro-Symbolic Clinical Reasoning**
+> How can logical neural networks be extended to encode clinical guidelines as soft constraints while maintaining differentiability?
 
-### 5.3 Success Metrics
+*Novelty:* Extension of IBM's LNN framework to multi-pathway clinical reasoning with hierarchical medical ontologies
 
-| Metric | Target | Baseline |
-|--------|--------|----------|
-| Time to appropriate antibiotic | -20% | Current standard |
-| Sepsis-related mortality | -15% | Current baseline |
-| Alert override rate | <5% | 90-96% for Epic |
-| Clinician satisfaction | >80% | Current dissatisfaction |
+**RQ3: Explainable Acute Care Decision Support**
+> What explanation modalities (reasoning chains, counterfactuals, feature importance) are most effective for clinician trust and adoption?
 
----
+*Novelty:* Human-centered evaluation of neuro-symbolic explanations with ED physicians
 
-## PART 6: RESOURCE REQUIREMENTS
+**RQ4: Multi-Modal Temporal Fusion**
+> How can knowledge graphs serve as scaffolds for integrating heterogeneous clinical data (vitals, labs, notes, imaging) with temporal alignment?
 
-### 6.1 Team Composition
+*Novelty:* KG-guided attention mechanisms for asynchronous multi-modal clinical data
 
-| Role | FTE | Cost/Year |
-|------|-----|-----------|
-| Clinical Informaticist (MD+AI) | 1 | $350K |
-| Neuro-Symbolic AI Researcher | 1 | $250K |
-| Healthcare Software Engineer | 2 | $400K |
-| Data Engineer | 1 | $200K |
-| Regulatory Expert (Part-time) | 0.5 | $100K |
-| **Total Personnel** | 5.5 | $1.3M |
+### 3.2 Potential Paper Contributions
 
-### 6.2 Infrastructure
+**Year 1-2 Papers:**
+1. "Temporal Knowledge Graphs for Emergency Department Risk Stratification" → **KDD/AAAI**
+2. "Benchmarking Temporal Clinical Reasoning: A MIMIC-IV Study" → **JAMIA**
+3. "Survey: Neuro-Symbolic AI in Healthcare" → **ACM Computing Surveys**
 
-| Item | Year 1 | Year 2-5 |
-|------|--------|----------|
-| GPU Compute (Cloud) | $150K | $200K/yr |
-| EHR Integration Development | $100K | $50K/yr |
-| Clinical Data Access Fees | $50K | $50K/yr |
-| **Total Infrastructure** | $300K | $300K/yr |
+**Year 2-3 Papers:**
+1. "Logical Neural Networks for Interpretable Sepsis Prediction" → **NeurIPS/ICML**
+2. "Clinician-Centered Evaluation of AI Explanations in Acute Care" → **CHI/CSCW**
+3. "Knowledge Graph-Scaffolded Multi-Modal EHR Fusion" → **Nature Digital Medicine**
 
-### 6.3 Partnerships
+**Year 3-4 Papers:**
+1. "Hybrid Reasoning Framework for ED Decision Support" → **AAAI/IJCAI**
+2. "Prospective Validation of Temporal Knowledge Graph-Based Clinical AI" → **NEJM AI/Lancet Digital Health**
 
-| Partner Type | Cost | Value |
-|--------------|------|-------|
-| Academic Medical Center (Mayo/Stanford/UCSF) | $100-200K/yr | Clinical validation, data access |
-| FDA Pre-Submission | $50K | Regulatory clarity |
-| EHR Integration Partner | $50K | Epic App Orchard access |
+### 3.3 Research Thrusts for Multiple Students
 
-### 6.4 Total Budget
-
-| Phase | Duration | Investment | Milestone |
-|-------|----------|------------|-----------|
-| Seed | 18 months | $3-5M | Published validation, IRB approvals |
-| Series A | 18 months | $15-25M | FDA submission, 5 pilots |
-| Series B | 24 months | $50-75M | 100+ hospitals, $10M ARR |
+| Thrust | CS Focus | Medicine Focus | Joint Work |
+|--------|----------|----------------|------------|
+| **Thrust 1: Representation** | Temporal KG architecture | Clinical ontology design | Schema validation |
+| **Thrust 2: Reasoning** | LNN implementation | Guideline formalization | Rule extraction |
+| **Thrust 3: Explanation** | XAI methods | Clinician studies | User evaluation |
+| **Thrust 4: Validation** | Benchmark development | Clinical protocols | Prospective studies |
 
 ---
 
-## PART 7: RISK ASSESSMENT
+## PART 4: DATASETS AND RESOURCES
 
-### 7.1 Technical Risks
+### 4.1 Publicly Available Datasets
+
+| Dataset | Size | Access | Relevance |
+|---------|------|--------|-----------|
+| **MIMIC-III** | 46K+ ICU stays | PhysioNet (free) | Primary benchmark |
+| **MIMIC-IV** | 300K+ admissions | PhysioNet (free) | Latest benchmark |
+| **MIMIC-IV-ED** | 448K+ ED visits | PhysioNet (free) | ED-specific |
+| **eICU** | 200K+ ICU stays | PhysioNet (free) | Multi-center validation |
+| **MIMIC-CXR** | 377K+ chest X-rays | PhysioNet (free) | Multi-modal |
+
+**Access Process:** PhysioNet credentialing (~1-2 weeks), CITI training required
+
+### 4.2 Knowledge Resources
+
+| Resource | Content | Access |
+|----------|---------|--------|
+| **SNOMED-CT** | 350K+ clinical concepts | UMLS license (free for research) |
+| **UMLS** | Unified medical terminology | NLM license (free) |
+| **ICD-10** | Diagnosis codes | Public |
+| **RxNorm** | Medication ontology | NLM (free) |
+| **DrugBank** | Drug interactions | Academic license |
+
+### 4.3 Computational Resources Needed
+
+| Resource | Specification | UCF Availability |
+|----------|---------------|------------------|
+| GPU Compute | 4x A100 or equivalent | STOKES cluster / AWS credits |
+| Storage | 5-10TB for datasets | Available |
+| Software | PyTorch, DGL, IBM LNN | Open source |
+
+---
+
+## PART 5: FUNDING OPPORTUNITIES
+
+### 5.1 Federal Funding
+
+| Agency | Program | Fit | Award Size | Duration |
+|--------|---------|-----|------------|----------|
+| **NSF** | CAREER | High | $500K-600K | 5 years |
+| **NSF** | RI: Medium | High | $600K-1.2M | 3-4 years |
+| **NSF** | Smart Health | Very High | $300K-1M | 3-4 years |
+| **NIH** | R21 (Exploratory) | High | $275K | 2 years |
+| **NIH** | R01 | High | $500K/yr | 5 years |
+| **NIH** | K99/R00 (Postdoc) | High | $250K | 5 years |
+| **AHRQ** | R01 Health IT | Very High | $400K/yr | 4 years |
+
+### 5.2 Specific Program Fit
+
+**NSF 24-582: Smart Health and Biomedical Research in the Era of AI**
+- Explicitly calls for "AI and machine learning for clinical decision support"
+- Requires interdisciplinary teams (CS + clinical)
+- UCF CS + Medicine is perfect fit
+
+**NIH NOT-OD-24-004: AI/ML for Healthcare**
+- Emphasis on trustworthy, explainable AI
+- Neuro-symbolic approaches directly aligned
+- Clinical validation requirements match our prospective validation thrust
+
+### 5.3 Industry Partnerships
+
+| Company | Interest | Partnership Type |
+|---------|----------|------------------|
+| **Epic** | Improve sepsis model | Data/validation partnership |
+| **IBM Research** | LNN healthcare applications | Framework collaboration |
+| **Google Health** | Clinical AI | Research grant |
+| **Microsoft Research** | Healthcare AI | Azure credits, collaboration |
+| **Oracle Health** | Clinical decision support | Data partnership |
+
+### 5.4 Foundation Funding
+
+| Foundation | Program | Fit |
+|------------|---------|-----|
+| **Gordon and Betty Moore** | Patient Safety | High |
+| **Robert Wood Johnson** | Healthcare Innovation | Medium |
+| **PCORI** | Patient-Centered Research | High |
+
+---
+
+## PART 6: COLLABORATION STRUCTURE
+
+### 6.1 Proposed Team Structure
+
+**UCF Computer Science:**
+- PI: Faculty with AI/ML expertise
+- Co-PI: Faculty with knowledge representation expertise
+- PhD Students: 2-3 (representation learning, neuro-symbolic, systems)
+
+**UCF College of Medicine:**
+- Co-PI: Faculty with clinical informatics expertise
+- Clinical Collaborators: ED physicians, critical care specialists
+- Medical Students/Residents: Clinical validation support
+
+### 6.2 External Collaborations
+
+| Institution | Role | Value |
+|-------------|------|-------|
+| **MIT CSAIL** | Benchmark validation | Credibility, comparison |
+| **Stanford BMIR** | Dataset expertise | MIMIC expertise |
+| **IBM Research** | LNN framework | Technical support |
+| **Orlando Health** | Clinical validation | Local ED data |
+| **AdventHealth** | Prospective studies | Multi-site validation |
+
+### 6.3 Advisory Board (Recommended)
+
+- Academic: 2-3 senior faculty from peer institutions
+- Clinical: 2 practicing ED physicians
+- Industry: 1 representative from EHR vendor or healthcare AI company
+
+---
+
+## PART 7: TIMELINE AND MILESTONES
+
+### 7.1 Year 1: Foundation
+
+| Quarter | Milestone | Deliverable |
+|---------|-----------|-------------|
+| Q1 | Dataset access, literature review | PhysioNet credentials, survey draft |
+| Q2 | Temporal KG framework design | Architecture document, initial code |
+| Q3 | MIMIC-III/IV benchmarking | Baseline results, benchmark paper draft |
+| Q4 | Grant submission (NSF CAREER/R21) | Submitted proposals |
+
+### 7.2 Year 2: Core Contributions
+
+| Quarter | Milestone | Deliverable |
+|---------|-----------|-------------|
+| Q1 | Temporal KG implementation | Open-source framework release |
+| Q2 | Neuro-symbolic integration | LNN clinical reasoning module |
+| Q3 | MIMIC-IV-ED validation | Top venue paper submission |
+| Q4 | Clinician evaluation design | IRB approval, study protocol |
+
+### 7.3 Year 3: Validation and Extension
+
+| Quarter | Milestone | Deliverable |
+|---------|-----------|-------------|
+| Q1 | Clinician user studies | CHI/CSCW paper submission |
+| Q2 | Multi-modal fusion | Architecture paper |
+| Q3 | Multi-site validation (eICU) | Generalization study |
+| Q4 | Grant renewal/expansion | R01 submission |
+
+### 7.4 Years 4-5: Impact and Translation
+
+- Prospective clinical validation (with hospital partners)
+- High-impact clinical venue publications (NEJM AI, Lancet Digital Health)
+- Dissertation completions
+- Technology transfer discussions
+
+---
+
+## PART 8: RISK ASSESSMENT (ACADEMIC)
+
+### 8.1 Research Risks
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
-| Real-time performance (<100ms) fails | 20% | High | Early architecture validation |
-| Knowledge graph curation too labor-intensive | 30% | Medium | LLM-assisted extraction |
-| Temporal reasoning doesn't generalize | 25% | High | Multi-site validation from start |
+| MIMIC data limitations | Low | Medium | eICU multi-site validation |
+| Neuro-symbolic scaling issues | Medium | Medium | Focus on interpretability over scale |
+| Negative clinician evaluation | Medium | High | Iterative design with clinician input |
+| Scooped by larger groups | Medium | High | Focus on clinical validation (our advantage) |
 
-### 7.2 Commercial Risks
-
-| Risk | Probability | Impact | Mitigation |
-|------|-------------|--------|------------|
-| Epic improves sepsis model | 40% | High | Focus on treatment optimization (their weakness) |
-| Sales cycles too long (>18 months) | 50% | Medium | Land-and-expand model |
-| Reimbursement unclear | 30% | Medium | Target quality improvement budgets |
-
-### 7.3 Regulatory Risks
+### 8.2 Funding Risks
 
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
-| FDA delays beyond 24 months | 30% | Medium | Pre-Sub meeting early |
-| Post-market surveillance requirements onerous | 40% | Medium | Predetermined Change Control Plan |
-| State-level variations | 20% | Low | Start in permissive states |
+| NSF/NIH rejection | Medium | High | Multiple submissions, industry backup |
+| Budget constraints | Low | Medium | Leverage cloud credits, open datasets |
+| Personnel turnover | Medium | Medium | Document everything, multiple students |
+
+### 8.3 Collaboration Risks
+
+| Risk | Probability | Impact | Mitigation |
+|------|-------------|--------|------------|
+| Clinical partner disengagement | Low | High | Formal agreements, regular meetings |
+| IRB delays | Medium | Medium | Early submission, standard protocols |
+| Data access issues | Low | Medium | Use only public datasets initially |
 
 ---
 
-## PART 8: DECISION FRAMEWORK
+## PART 9: SUCCESS METRICS (ACADEMIC)
 
-### 8.1 Go/No-Go Criteria (18-Month Checkpoint)
+### 9.1 Publication Metrics
 
-**GO if ALL of the following:**
-- [ ] Peer-reviewed publication with AUC >0.80 for sepsis treatment optimization
-- [ ] Alert override rate <10% in clinical simulation
-- [ ] Multi-demographic performance within 5% across groups
-- [ ] At least one academic medical center partner committed to prospective validation
-- [ ] Technical architecture validated for <100ms inference latency
+| Timeframe | Target |
+|-----------|--------|
+| Year 1 | 1-2 workshop papers, 1 survey submission |
+| Year 2 | 2 top venue submissions (NeurIPS/ICML/KDD/AAAI) |
+| Year 3 | 1 clinical venue (JAMIA/Nature DM), 2 CS venues |
+| Year 4-5 | 1 high-impact clinical (NEJM AI/Lancet DH) |
+| Total | 8-12 peer-reviewed publications |
 
-**NO-GO if ANY of the following:**
-- [ ] AUC <0.75 on external validation
-- [ ] Clinician acceptance <50% in user studies
-- [ ] Technical infeasibility of real-time integration demonstrated
-- [ ] Fundamental safety concerns identified
-- [ ] No academic partnership secured
+### 9.2 Funding Metrics
 
-### 8.2 Pivot Options
+| Timeframe | Target |
+|-----------|--------|
+| Year 1 | Submit NSF CAREER + NIH R21 |
+| Year 2 | Secure $300K+ funding |
+| Year 3 | Submit R01, secure $500K+ cumulative |
+| Year 5 | $1M+ cumulative funding |
 
-If primary direction fails:
+### 9.3 Impact Metrics
 
-1. **Pivot to Data Augmentation:** Use diffusion models for synthetic EHR generation (lower regulatory burden)
-2. **Pivot to Research Tools:** Temporal KG as academic research infrastructure (lower commercial bar)
-3. **Pivot to Documentation:** Apply neuro-symbolic reasoning to clinical documentation (follow market)
+| Metric | Target |
+|--------|--------|
+| Citations (5 year) | 500+ |
+| GitHub stars (framework) | 200+ |
+| Benchmark adoption | 3+ external papers using |
+| Clinical validation | 1 prospective study completed |
 
-### 8.3 Exit Opportunities
+### 9.4 Student Outcomes
 
-| Acquirer Type | Examples | Fit |
-|---------------|----------|-----|
-| EHR Vendors | Epic, Oracle Health | Platform integration |
-| Imaging AI | Viz.ai, Aidoc | Multimodal expansion |
-| Big Tech | Google, Microsoft | Healthcare AI stack |
-| Life Sciences | Roche, J&J | Clinical development |
+| Outcome | Target |
+|---------|--------|
+| PhD dissertations | 2-3 |
+| MS theses | 3-4 |
+| Student publications | 4+ per student |
+| Industry placements | Top tech/healthcare AI |
 
 ---
 
-## APPENDIX A: KEY CITATIONS
+## PART 10: RECOMMENDATION
 
-### Temporal Knowledge Graphs
-- Jhee et al. (2025). Predicting clinical outcomes from patient care pathways with temporal knowledge graphs. ESWC 2025. arXiv:2502.21138
-- Lin et al. (2024). KAT-GNN: Knowledge-Augmented Temporal GNN. arXiv:2511.01249
+### 10.1 Overall Assessment
+
+| Criterion | Score | Rationale |
+|-----------|-------|-----------|
+| Scientific novelty | 8/10 | Unique intersection of TKG + neuro-symbolic + clinical |
+| Publication potential | 9/10 | Multiple venues across CS and clinical |
+| Funding alignment | 9/10 | Direct fit with NSF Smart Health, NIH AI priorities |
+| Feasibility | 7/10 | Public datasets available, manageable scope |
+| UCF fit | 8/10 | Leverages CS-Medicine collaboration |
+| Student training | 9/10 | Rich dissertation topics, industry-relevant skills |
+
+**Overall Score: 8.3/10 - STRONGLY RECOMMENDED**
+
+### 10.2 Recommended Next Steps
+
+1. **Immediate (Month 1):**
+   - Identify faculty collaborators in CS and Medicine
+   - Apply for PhysioNet MIMIC access
+   - Draft NSF CAREER concept
+
+2. **Near-term (Months 2-3):**
+   - Recruit initial PhD student(s)
+   - Establish clinical advisory relationship
+   - Submit internal seed funding application
+
+3. **Medium-term (Months 4-6):**
+   - Complete literature survey
+   - Develop initial temporal KG prototype
+   - Submit NSF CAREER proposal
+
+### 10.3 Potential Challenges for UCF Specifically
+
+| Challenge | Mitigation |
+|-----------|------------|
+| Limited clinical informatics history | Partner with established groups, leverage Medicine school |
+| Competition from R1 powerhouses | Focus on clinical validation (requires hospital access) |
+| Resource constraints | Use cloud credits, open datasets, lean team |
+
+### 10.4 Unique UCF Advantages
+
+| Advantage | Leverage Strategy |
+|-----------|-------------------|
+| Orlando healthcare ecosystem | Partner with Orlando Health, AdventHealth, Nemours |
+| Growing CS department | Position as flagship interdisciplinary initiative |
+| Medical school maturation | Joint programs, shared students |
+| Florida healthcare market | State funding opportunities, industry partnerships |
+
+---
+
+## APPENDIX A: KEY CITATIONS FOR PROPOSAL WRITING
+
+### Foundational Papers (Must Cite)
+1. Jhee et al. (2025). Temporal knowledge graphs for clinical outcomes. arXiv:2502.21138
+2. Lu et al. (2024). Neuro-symbolic diagnosis prediction. arXiv:2410.01855
+3. Cui et al. (2024). MINGLE: Multimodal EHR fusion. arXiv:2403.08818
+4. Edin et al. (2023). Medical coding critical review. arXiv:2304.10909
+5. Xie et al. (2021). ED triage benchmark. Scientific Data.
+
+### Background Papers
+6. Shickel et al. (2017). Deep EHR survey. IEEE JBHI.
+7. He et al. (2023). MedDiff: Diffusion for EHR. arXiv:2302.04355
+8. Vu et al. (2020). LAAT for ICD coding. arXiv:2007.06351
 
 ### Neuro-Symbolic AI
-- Lu et al. (2024). Explainable Diagnosis Prediction through Neuro-Symbolic Integration. arXiv:2410.01855
-- Hossain & Chen (2025). Neuro-Symbolic AI: Healthcare Perspectives. arXiv:2503.18213
-
-### Diffusion Models
-- He et al. (2023). MedDiff: Generating EHR using Accelerated Denoising Diffusion. arXiv:2302.04355
-- Tian et al. (2023). TimeDiff: Privacy-preserving Synthetic EHR via Diffusion. JAMIA.
-
-### Multimodal Fusion
-- Cui et al. (2024). MINGLE: Multimodal Integration via Graph Learning and LLM Enhancement. arXiv:2403.08818
-
-### ICD Coding
-- Edin et al. (2023). Automated Medical Coding: A Critical Review. arXiv:2304.10909
-- Vu et al. (2020). LAAT: Label Attention Model for ICD Coding. arXiv:2007.06351
-
-### Privacy & Deployment
-- Cremonesi et al. (2023). Fed-BioMed: Trusted Federated Learning for Healthcare. arXiv:2304.12012
-
-### Market & Competition
-- Epic Sepsis Model External Validation. Fierce Healthcare, 2024.
-- IBM Watson Health Failure Analysis. IEEE Spectrum, 2022.
+9. Hossain & Chen (2025). Neuro-symbolic healthcare perspectives. arXiv:2503.18213
+10. IBM LNN documentation and papers
 
 ---
 
-## APPENDIX B: GLOSSARY
+## APPENDIX B: SAMPLE GRANT LANGUAGE
 
-| Term | Definition |
-|------|------------|
-| TKG | Temporal Knowledge Graph |
-| LNN | Logical Neural Network |
-| RGCN | Relational Graph Convolutional Network |
-| FHIR | Fast Healthcare Interoperability Resources |
-| CAC | Computer-Assisted Coding |
-| AUROC | Area Under Receiver Operating Characteristic |
-| PHI | Protected Health Information |
-| HIPAA | Health Insurance Portability and Accountability Act |
-| 510(k) | FDA premarket notification pathway |
-| De Novo | FDA pathway for novel low-moderate risk devices |
+### Project Summary (NSF Style)
+> This project develops a hybrid reasoning framework for acute care clinical decision support that combines temporal knowledge graphs with neuro-symbolic AI. Unlike current "black-box" deep learning approaches that lack interpretability and fail to generalize across patient populations, our approach integrates structured clinical knowledge with neural learning to produce explainable, trustworthy predictions. We will: (1) develop a temporal knowledge graph representation for emergency department patient trajectories, (2) extend logical neural networks to encode clinical guidelines as differentiable constraints, (3) evaluate explanation effectiveness with practicing clinicians, and (4) validate on multi-site public datasets. This interdisciplinary collaboration between computer science and medicine will advance both AI methodology and clinical practice.
+
+### Intellectual Merit (NSF Style)
+> This research makes fundamental contributions to knowledge representation, machine learning, and clinical informatics. Specifically, we introduce (1) a novel temporal knowledge graph schema for acute care that formalizes clinical event sequences using Allen's interval algebra, (2) extensions to logical neural networks that incorporate hierarchical medical ontologies as soft constraints, and (3) the first systematic evaluation of neuro-symbolic explanations with emergency department physicians.
+
+### Broader Impacts (NSF Style)
+> Emergency departments serve as the healthcare safety net, providing 28% of all acute care visits. Improving ED decision support has direct implications for health equity, as underserved populations disproportionately rely on emergency care. This project will produce open-source tools, public benchmarks, and educational materials. Graduate students will receive interdisciplinary training at the intersection of AI and medicine. We will engage undergraduate researchers through REU supplements and partner with UCF's diverse student body to broaden participation in computing.
 
 ---
 
-*This research brief synthesizes findings from 8 parallel deep-dive research agents analyzing 100+ papers, commercial solutions, and market dynamics. Prepared November 2025.*
+*This research brief was prepared to assess the viability of "Hybrid Reasoning for Acute Care" as an academic research direction for UCF Computer Science and College of Medicine. Analysis based on comprehensive literature review of 100+ papers across temporal knowledge graphs, neuro-symbolic AI, generative models, multimodal fusion, ICD coding, and privacy-preserving ML.*
