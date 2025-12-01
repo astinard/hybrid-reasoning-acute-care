@@ -273,11 +273,12 @@ hybrid-reasoning-acute-care/
 
 ## UCF Strategic Advantages
 
-1. **Orlando Health Partnership** - 3,200-bed health system
-2. **AdventHealth Network** - 50+ hospitals
-3. **VA Orlando** - Federal data access
-4. **Regional Focus** - Community hospitals
-5. **Faculty Collaborators** - Drs. Sukthankar, Bagci, Gurupur, Cico
+1. **HCA Healthcare Partnership** - Nation's largest for-profit hospital system (182+ hospitals)
+2. **UCF Lake Nona Medical Center** - UCF's academic medical center with HCA
+3. **UCF/HCA GME Consortium** - Largest Graduate Medical Education program in the nation
+4. **VA Orlando** - Federal data access, underserved populations
+5. **Regional Focus** - Community hospitals (not just academic medical centers)
+6. **Faculty Collaborators** - Drs. Sukthankar, Bagci, Gurupur, Cico
 
 ---
 

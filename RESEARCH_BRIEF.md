@@ -85,9 +85,9 @@ This research direction offers:
 - UCF Academic Health Sciences Center - IRB infrastructure and clinical research support
 
 **Orlando Healthcare Ecosystem (UCF Unique Advantage):**
-- **Orlando Health** - 3,200+ beds, Level 1 trauma center, existing UCF partnership
-- **AdventHealth** - 50+ hospitals across Florida, innovation-forward culture
-- **Nemours Children's Health** - Pediatric focus, strong research infrastructure
+- **HCA Healthcare** - Nation's largest for-profit hospital system (182+ hospitals), UCF strategic partner
+- **UCF Lake Nona Medical Center** - UCF's academic medical center operated with HCA
+- **UCF/HCA GME Consortium** - Largest Graduate Medical Education program in the nation (1,000+ residents)
 - **VA Orlando Healthcare System** - Federal data access pathway, underserved populations
 
 **Interdisciplinary Opportunity:**
@@ -333,10 +333,11 @@ EXPLANATION: Temporal trajectory shows classic early sepsis
 **Key Insight:** UCF cannot beat MIT at NeurIPS. But MIT cannot beat UCF at deploying temporal KG systems to community hospitals in Florida within 18 months.
 
 **UCF's Unique Advantages:**
-1. **Orlando Health Partnership** - Direct path to 3,200-bed health system
-2. **AdventHealth Network** - 50+ hospitals, innovation culture
-3. **VA Orlando** - Federal data access, underserved focus
-4. **Regional Focus** - Community/regional hospitals (not academic medical centers)
+1. **HCA Healthcare Partnership** - Nation's largest hospital system (182+ hospitals), UCF strategic partner
+2. **UCF Lake Nona Medical Center** - UCF's academic medical center with HCA
+3. **UCF/HCA GME Consortium** - Largest GME program in the nation
+4. **VA Orlando** - Federal data access, underserved focus
+5. **Regional Focus** - Community/regional hospitals (not academic medical centers)
 
 **Strategic Publication Targets:**
 - **Primary:** JAMIA, AAAI, Nature Digital Medicine (clinical validation valued)
@@ -359,7 +360,7 @@ EXPLANATION: Temporal trajectory shows classic early sepsis
 > "Production-Ready Temporal KG Infrastructure for Regional/Community Hospitals with Prospective Clinical Validation"
 
 This requires:
-- Real hospital partnerships (we have Orlando Health, AdventHealth)
+- Real hospital partnerships (HCA Healthcare, UCF Lake Nona Medical Center)
 - IRB-approved prospective studies (we have pathway)
 - Clinician user studies (UCF Medicine collaboration)
 - Deployment experience (not just benchmarks)
@@ -375,7 +376,7 @@ This requires:
 | Phase | Data Source | IRB Status | Timeline |
 |-------|-------------|------------|----------|
 | **Phase 1** | MIMIC-III/IV (public) | Exempt | Months 1-12 |
-| **Phase 2** | UCF/Orlando Health (retrospective) | Expedited | Months 6-18 |
+| **Phase 2** | UCF/HCA (retrospective) | Expedited | Months 6-18 |
 | **Phase 3** | Prospective pilot (silent) | Full Board | Months 12-30 |
 | **Phase 4** | Randomized trial | Full Board + DSMB | Months 24-48 |
 
@@ -393,7 +394,7 @@ Our system qualifies for CDS exemption because:
 
 ### 6.3 Hospital Partnership Pathway
 
-**Orlando Health (Primary Partner):**
+**HCA Healthcare / UCF Lake Nona (Primary Partner):**
 - Existing UCF College of Medicine affiliation
 - DUA/BAA template language prepared
 - IT integration pathway via Epic (Interconnect API)
@@ -581,7 +582,7 @@ Our system qualifies for CDS exemption because:
 | **MIT CSAIL** | Benchmark validation | Credibility, comparison |
 | **Stanford BMIR** | Dataset expertise | MIMIC expertise |
 | **IBM Research** | LNN framework | Technical support |
-| **Orlando Health** | Clinical validation | Local ED data |
+| **HCA Healthcare** | Clinical validation | Local ED data |
 | **AdventHealth** | Prospective studies | Multi-site validation |
 
 ### 10.3 Advisory Board (Recommended)
@@ -710,7 +711,7 @@ Our system qualifies for CDS exemption because:
 | Publication potential | 9/10 | **9/10** | Strategic venue targeting: JAMIA, AAAI, Nature DM (avoid NeurIPS competition) |
 | Funding alignment | 9/10 | **9/10** | NSF Smart Health, NIH AI priorities, AHRQ Health IT |
 | Feasibility | 7/10 | **9/10** | 8-12% AUROC improvement on MIMIC-IV demonstrated (see PRELIMINARY_RESULTS.md) |
-| UCF fit | 8/10 | **9/10** | Named faculty (Sukthankar, Bagci, Gurupur, Cico), hospital partnerships (Orlando Health, AdventHealth) |
+| UCF fit | 8/10 | **9/10** | Named faculty (Sukthankar, Bagci, Gurupur, Cico), HCA partnership, UCF Lake Nona, largest GME in nation |
 | Student training | 9/10 | **9/10** | 4 research thrusts, clear dissertation topics |
 | Regulatory readiness | N/A | **9/10** | FDA CDS exemption pathway, IRB protocol templates (see IRB_REGULATORY_PATHWAY.md) |
 | Technical maturity | N/A | **9/10** | Complete architecture, 6-month prototype roadmap (see TECHNICAL_ARCHITECTURE.md) |
@@ -757,7 +758,7 @@ Our system qualifies for CDS exemption because:
 
 | Advantage | Leverage Strategy |
 |-----------|-------------------|
-| Orlando healthcare ecosystem | Partner with Orlando Health, AdventHealth, Nemours |
+| Orlando healthcare ecosystem | HCA partnership, UCF Lake Nona Medical Center, largest GME in nation |
 | Growing CS department | Position as flagship interdisciplinary initiative |
 | Medical school maturation | Joint programs, shared students |
 | Florida healthcare market | State funding opportunities, industry partnerships |
@@ -805,7 +806,7 @@ This research brief is supported by four comprehensive supplementary documents:
 
 2. **[COMPETITIVE_DIFFERENTIATION.md](./COMPETITIVE_DIFFERENTIATION.md)** - Strategic positioning analysis against Stanford BMIR, MIT CSAIL, IBM Research, UIUC, and CMU. Includes collaboration vs competition matrix and publication venue strategy.
 
-3. **[IRB_REGULATORY_PATHWAY.md](./IRB_REGULATORY_PATHWAY.md)** - Complete IRB protocol templates, FDA CDS exemption pathway analysis, BAA/DUA templates for Orlando Health and AdventHealth partnerships, and 4-phase regulatory timeline.
+3. **[IRB_REGULATORY_PATHWAY.md](./IRB_REGULATORY_PATHWAY.md)** - Complete IRB protocol templates, FDA CDS exemption pathway analysis, BAA/DUA templates for HCA Healthcare partnerships, and 4-phase regulatory timeline.
 
 4. **[TECHNICAL_ARCHITECTURE.md](./TECHNICAL_ARCHITECTURE.md)** - Full system architecture, data schemas (Node, Edge, Allen Interval), algorithm pseudocode, technology stack specifications, and 6-month prototype roadmap.
 
