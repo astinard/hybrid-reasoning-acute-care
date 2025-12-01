@@ -9,11 +9,22 @@
 
 | Metric | Value |
 |--------|-------|
-| **Research Documents** | 108 |
-| **Total Lines** | 141,065 |
+| **Research Documents** | 109 |
+| **Total Lines** | 141,065+ |
 | **ArXiv Papers Synthesized** | 1,500+ |
 | **Research Score** | 9.5/10 |
 | **Repository Size** | 5.5 MB |
+
+## Quick Links
+
+| Document | Description |
+|----------|-------------|
+| [RESEARCH_BRIEF.md](RESEARCH_BRIEF.md) | Research viability assessment (9.5/10) |
+| [docs/TECHNICAL_ARCHITECTURE.md](docs/TECHNICAL_ARCHITECTURE.md) | System design |
+| [docs/PRELIMINARY_RESULTS.md](docs/PRELIMINARY_RESULTS.md) | MIMIC-IV validation results |
+| [docs/IRB_REGULATORY_PATHWAY.md](docs/IRB_REGULATORY_PATHWAY.md) | FDA/IRB pathway |
+| [docs/COMPETITIVE_DIFFERENTIATION.md](docs/COMPETITIVE_DIFFERENTIATION.md) | Strategic positioning |
+| [research/hca_ucf_partnership.md](research/hca_ucf_partnership.md) | HCA/UCF partnership details |
 
 ---
 
@@ -33,40 +44,32 @@ This is a **research literature corpus** - a comprehensive collection of synthes
 ```
 hybrid-reasoning-acute-care/
 │
-├── Top-Level Documents
-│   ├── README.md                      # This file
-│   ├── RESEARCH_BRIEF.md              # Research viability assessment (9.5/10)
-│   ├── PRELIMINARY_RESULTS.md         # MIMIC-IV validation results
-│   ├── COMPETITIVE_DIFFERENTIATION.md # Strategic positioning
-│   ├── IRB_REGULATORY_PATHWAY.md      # FDA/IRB pathway
-│   ├── TECHNICAL_ARCHITECTURE.md      # System design
-│   ├── literature_review.md           # Initial literature review
-│   └── research_gap_synthesis.md      # Gap analysis
+├── README.md                    # This file
+├── RESEARCH_BRIEF.md            # Research viability assessment (9.5/10)
 │
-└── research/                          # 108 documents (141,065 lines)
-    │
-    ├── FOUNDATIONS (13 documents)
-    │   ├── allen_temporal_algebra.md
-    │   ├── ibm_lnn_framework.md
-    │   ├── fhir_clinical_standards.md
-    │   ├── ohdsi_omop_cdm.md
-    │   ├── epic_sepsis_model_analysis.md
-    │   ├── fda_cds_guidance_current.md
-    │   ├── mimic_iv_dataset_details.md
-    │   ├── nsf_smart_health_awards_2024.md
-    │   ├── clinical_trials_ai.md
-    │   ├── ucf_faculty_profiles.md
-    │   ├── orlando_health_ai_initiatives.md
-    │   ├── CROSS_DOMAIN_SYNTHESIS.md
-    │   └── RESEARCH_GAPS_MATRIX.md
-    │
-    └── ARXIV SYNTHESIS (95 documents)
-        ├── Core Methods
-        ├── Clinical Predictions
-        ├── Medical Specialties
-        ├── Deep Learning
-        ├── Implementation
-        └── Emerging Tech
+├── docs/                        # Supporting documentation
+│   ├── ARCHITECTURE_SUMMARY.md
+│   ├── COMPETITIVE_DIFFERENTIATION.md
+│   ├── IRB_REGULATORY_PATHWAY.md
+│   ├── PRELIMINARY_RESULTS.md
+│   ├── TECHNICAL_ARCHITECTURE.md
+│   ├── literature_review.md
+│   └── research_gap_synthesis.md
+│
+└── research/                    # 109 documents (141,065+ lines)
+    ├── Foundations (14 documents)
+    │   └── Temporal algebra, FHIR, OMOP, UCF/HCA partnership...
+    └── ArXiv Synthesis (95 documents)
+        ├── Core Methods (18)
+        ├── Clinical Predictions (14)
+        ├── Medical Specialties (11)
+        ├── Clinical NLP (5)
+        ├── Medical Imaging (4)
+        ├── Advanced ML (7)
+        ├── Clinical Operations (12)
+        ├── Human-AI & Explainability (4)
+        ├── Implementation (13)
+        └── Emerging Technologies (7)
 ```
 
 ---
