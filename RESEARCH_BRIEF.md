@@ -2,10 +2,10 @@
 ## University of Central Florida - Computer Science & College of Medicine
 ## Interdisciplinary Research Direction Assessment
 
-**Date:** November 2025 (Enhanced v3.0 - Comprehensive Literature Corpus)
+**Date:** December 2025 (Enhanced v4.0 - Comprehensive Literature Corpus)
 **Prepared For:** UCF Department of Computer Science & UCF College of Medicine
 **Purpose:** Doctoral/Faculty Research Direction Viability Assessment
-**Research Corpus:** 62 documents, 134,719 lines, 400+ ArXiv papers synthesized
+**Research Corpus:** 108 documents, 141,065 lines, 1,500+ ArXiv papers synthesized
 
 ---
 
@@ -15,7 +15,7 @@ This brief assesses the viability of "Hybrid Reasoning for Acute Care: Temporal 
 
 ### RECOMMENDATION: **HIGHLY RECOMMENDED - STRATEGIC OPPORTUNITY**
 
-**Overall Score: 9.2/10** (Enhanced from 9.0 with comprehensive literature corpus grounding all claims)
+**Overall Score: 9.5/10** (Enhanced from 9.2 with 108 documents, 141K lines, 1,500+ ArXiv papers)
 
 This research direction offers:
 1. **High publication potential** across top venues (JAMIA, AAAI, Nature Digital Medicine, CHI)
@@ -26,7 +26,7 @@ This research direction offers:
 6. **Preliminary validation** demonstrating 8-12% AUROC improvement over baselines on MIMIC-IV
 7. **Clear regulatory pathway** with FDA CDS exemption pathway established
 8. **Strategic positioning** targeting community hospital deployment (UCF advantage vs Stanford/MIT)
-9. **Comprehensive evidence base** - 62 research documents, 134K+ lines, 400+ ArXiv papers analyzed
+9. **Comprehensive evidence base** - 108 research documents, 141K+ lines, 1,500+ ArXiv papers analyzed
 
 **Estimated Timeline:** 3-5 years for dissertation-level contribution
 **Funding Sources:** NSF CAREER, NIH R01/R21, AHRQ R01, DoD CDMRP, industry partnerships
@@ -36,10 +36,12 @@ This research direction offers:
 - [COMPETITIVE_DIFFERENTIATION.md](./COMPETITIVE_DIFFERENTIATION.md) - Strategic positioning vs peer institutions
 - [IRB_REGULATORY_PATHWAY.md](./IRB_REGULATORY_PATHWAY.md) - Complete regulatory and IRB pathway
 - [TECHNICAL_ARCHITECTURE.md](./TECHNICAL_ARCHITECTURE.md) - Implementation architecture and prototype design
-- [research/](./research/) - **62 comprehensive research documents** (134,719 lines) covering:
+- [research/](./research/) - **108 comprehensive research documents** (141,065 lines) covering:
   - Domain ontologies (SNOMED-CT, UMLS, LOINC, RxNorm)
-  - ArXiv literature synthesis (400+ papers across 40+ topic areas)
-  - Clinical datasets (MIMIC, eICU, OHDSI OMOP)
+  - ArXiv literature synthesis (1,500+ papers across 95+ topic areas)
+  - Clinical domains (sepsis, cardiac, trauma, pediatric, obstetrics, oncology, psychiatry, etc.)
+  - Advanced methods (LLM agents, diffusion, state-space models, quantum ML, digital twins)
+  - Implementation (FDA guidance, MLOps, deployment, validation, benchmarks)
   - Regulatory/funding landscape (FDA, NSF, NIH)
   - UCF faculty profiles and Orlando Health ecosystem
 
