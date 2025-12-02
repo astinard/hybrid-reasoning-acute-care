@@ -1,287 +1,313 @@
 # Research Literature Corpus
 
-**157 documents | 197,000+ lines | 2,000+ ArXiv papers synthesized**
+<p align="center">
+  <strong>157 documents</strong> &nbsp;|&nbsp; <strong>197,000+ lines</strong> &nbsp;|&nbsp; <strong>2,000+ ArXiv papers</strong>
+</p>
 
-This folder contains comprehensive literature syntheses covering every major topic in clinical AI for acute care settings.
+Comprehensive literature syntheses covering every major topic in clinical AI for acute care.
 
 ---
 
-## Foundations (14 documents)
+## Quick Navigation
 
-Core frameworks, datasets, standards, and institutional context.
+| Category | Docs | Focus |
+|----------|------|-------|
+| [_foundations/](_foundations/) | 12 | MIMIC-IV, FHIR, OMOP, FDA, IBM LNN |
+| [_institutional/](_institutional/) | 6 | UCF/HCA partnership, funding |
+| [_domain_synthesis/](_domain_synthesis/) | 2 | Cross-cutting analysis |
+| [01_temporal_methods/](01_temporal_methods/) | 7 | Temporal KGs, time series, event sequences |
+| [02_graph_neural_networks/](02_graph_neural_networks/) | 10 | GNN, embeddings, KG reasoning |
+| [03_hybrid_neurosymbolic/](03_hybrid_neurosymbolic/) | 7 | Neuro-symbolic, constraints |
+| [04_clinical_prediction/](04_clinical_prediction/) | 19 | Sepsis, AKI, mortality, risk |
+| [05_clinical_nlp/](05_clinical_nlp/) | 10 | NLP, coding, summarization |
+| [06_medical_imaging/](06_medical_imaging/) | 9 | ECG, X-ray, multimodal fusion |
+| [07_specialty_domains/](07_specialty_domains/) | 19 | Oncology, pediatric, surgical |
+| [08_clinical_operations/](08_clinical_operations/) | 8 | Triage, ED, alerts, workflow |
+| [09_learning_methods/](09_learning_methods/) | 18 | Transfer, RL, causal, diffusion |
+| [10_implementation_deployment/](10_implementation_deployment/) | 12 | MLOps, federated, edge, validation |
+| [11_interpretability_safety/](11_interpretability_safety/) | 10 | XAI, fairness, safety |
+| [12_data_quality/](12_data_quality/) | 6 | Missing data, synthetic, augmentation |
+| [13_emerging_technology/](13_emerging_technology/) | 9 | LLMs, digital twins, quantum |
+
+---
+
+## Foundations & Context
+
+### _foundations/ (12 documents)
+Core standards, datasets, and frameworks.
+
+| Document | Description | Key Metric |
+|----------|-------------|------------|
+| `allen_temporal_algebra.md` | Allen's 13 interval relations | Temporal logic foundation |
+| `ibm_lnn_framework.md` | IBM Logical Neural Networks | 17% improvement, 100x compression |
+| `fhir_clinical_standards.md` | FHIR R4 data standards | Interoperability |
+| `ohdsi_omop_cdm.md` | OMOP Common Data Model | 39 tables, 810M patients |
+| `mimic_iv_dataset_details.md` | MIMIC-IV dataset | 364,627 patients |
+| `fda_cds_guidance_current.md` | FDA CDS regulatory pathway | 4-criteria exemption |
+| `epic_sepsis_model_analysis.md` | Epic model failure analysis | AUROC 0.63 (why it failed) |
+| `arxiv_fda_ai_guidance.md` | FDA AI/ML guidance | Regulatory framework |
+
+### _institutional/ (6 documents)
+Partnership and funding landscape.
 
 | Document | Description |
 |----------|-------------|
-| [allen_temporal_algebra.md](allen_temporal_algebra.md) | Allen's 13 interval relations for clinical events |
-| [ibm_lnn_framework.md](ibm_lnn_framework.md) | IBM Logical Neural Network architecture |
-| [fhir_clinical_standards.md](fhir_clinical_standards.md) | FHIR R4 data standards |
-| [ohdsi_omop_cdm.md](ohdsi_omop_cdm.md) | OMOP Common Data Model (39 tables) |
-| [epic_sepsis_model_analysis.md](epic_sepsis_model_analysis.md) | Epic model failure analysis (AUROC 0.63) |
-| [fda_cds_guidance_current.md](fda_cds_guidance_current.md) | FDA CDS regulatory pathway |
-| [mimic_iv_dataset_details.md](mimic_iv_dataset_details.md) | MIMIC-IV dataset (364,627 patients) |
-| [nsf_smart_health_awards_2024.md](nsf_smart_health_awards_2024.md) | NSF funding opportunities |
-| [clinical_trials_ai.md](clinical_trials_ai.md) | 3,106 AI/ML clinical trials |
-| [ucf_faculty_profiles.md](ucf_faculty_profiles.md) | UCF collaborator profiles |
-| [hca_ucf_partnership.md](hca_ucf_partnership.md) | HCA Healthcare / UCF partnership |
-| [orlando_health_ai_initiatives.md](orlando_health_ai_initiatives.md) | Regional health system AI |
-| [CROSS_DOMAIN_SYNTHESIS.md](CROSS_DOMAIN_SYNTHESIS.md) | Cross-domain integration |
-| [RESEARCH_GAPS_MATRIX.md](RESEARCH_GAPS_MATRIX.md) | 20 identified research gaps |
+| `hca_ucf_partnership.md` | HCA/UCF partnership (182+ hospitals) |
+| `ucf_faculty_profiles.md` | UCF collaborator profiles |
+| `orlando_health_ai_initiatives.md` | Regional health system AI |
+| `nsf_smart_health_awards_2024.md` | NSF funding opportunities |
+| `nih_funding_mechanisms.md` | NIH R01/R21 pathways |
+| `commercial_cds_vendors.md` | Competitive landscape |
 
 ---
 
-## Core AI Methods (18 documents)
+## Core Technical Methods
 
-Foundational AI/ML techniques for clinical applications.
+### 01_temporal_methods/ (7 documents)
+Temporal reasoning for clinical events.
 
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_temporal_kg_2024.md](arxiv_temporal_kg_2024.md) | Temporal Knowledge Graphs | KAT-GNN AUROC 0.9269 |
-| [arxiv_temporal_reasoning.md](arxiv_temporal_reasoning.md) | Temporal Logic | Allen algebra formalization |
-| [arxiv_gnn_clinical_2024.md](arxiv_gnn_clinical_2024.md) | Graph Neural Networks | AUROC 70-94% |
-| [arxiv_kg_reasoning_clinical.md](arxiv_kg_reasoning_clinical.md) | KG Reasoning | ComplEx MRR 0.50 |
-| [arxiv_graph_embeddings_healthcare.md](arxiv_graph_embeddings_healthcare.md) | Graph Embeddings | Patient similarity |
-| [arxiv_neurosymbolic_healthcare.md](arxiv_neurosymbolic_healthcare.md) | Neuro-Symbolic AI | 60+ papers |
-| [arxiv_hybrid_symbolic_neural.md](arxiv_hybrid_symbolic_neural.md) | Hybrid Architectures | 17% improvement |
-| [arxiv_constraint_satisfaction.md](arxiv_constraint_satisfaction.md) | Constraint Optimization | CP-SAT 18 seconds |
-| [arxiv_guideline_encoding.md](arxiv_guideline_encoding.md) | Clinical Guidelines | CQL, Arden Syntax |
-| [arxiv_attention_mechanisms_medical.md](arxiv_attention_mechanisms_medical.md) | Attention Mechanisms | Self/cross attention |
-| [arxiv_clinical_embeddings.md](arxiv_clinical_embeddings.md) | Clinical Embeddings | Patient representations |
-| [arxiv_time_series_clinical.md](arxiv_time_series_clinical.md) | Time Series | AUC 0.85-0.93 |
-| [arxiv_transfer_learning_clinical.md](arxiv_transfer_learning_clinical.md) | Transfer Learning | Domain adaptation |
-| [arxiv_contrastive_learning_medical.md](arxiv_contrastive_learning_medical.md) | Contrastive Learning | ConVIRT, MoCo-CXR |
-| [arxiv_causal_inference_ehr.md](arxiv_causal_inference_ehr.md) | Causal Inference | Treatment effects |
-| [arxiv_uncertainty_medical.md](arxiv_uncertainty_medical.md) | Uncertainty Quantification | MC Dropout |
-| [arxiv_privacy_preserving_clinical.md](arxiv_privacy_preserving_clinical.md) | Privacy ML | DP-SGD ε ≈ 9.0 |
-| [arxiv_reinforcement_learning_clinical.md](arxiv_reinforcement_learning_clinical.md) | Reinforcement Learning | Conservative Q-learning |
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_temporal_kg_2024.md` | KAT-GNN AUROC 0.9269 |
+| `arxiv_temporal_reasoning.md` | Allen algebra formalization |
+| `arxiv_temporal_gnn.md` | Dynamic temporal GNNs |
+| `arxiv_time_series_clinical.md` | AUC 0.85-0.93 |
+| `arxiv_clinical_time_series_forecasting.md` | Forecasting methods |
+| `arxiv_event_sequence_clinical.md` | Event sequence modeling |
+| `arxiv_sequence_diffusion.md` | SEDD, trajectory generation |
 
----
+### 02_graph_neural_networks/ (10 documents)
+Graph-based learning for healthcare.
 
-## Clinical Predictions (14 documents)
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_gnn_clinical_2024.md` | AUROC 70-94% |
+| `arxiv_kg_reasoning_clinical.md` | ComplEx MRR 0.50 |
+| `arxiv_graph_embeddings_healthcare.md` | Patient similarity |
+| `arxiv_graph_diffusion.md` | DiGress, graph generation |
+| `arxiv_clinical_graph_construction.md` | Graph construction methods |
+| `arxiv_ddi_knowledge_graphs.md` | Drug-drug interactions |
+| `arxiv_clinical_embeddings.md` | Patient representations |
+| `arxiv_clinical_embeddings_representations.md` | Deep embeddings |
+| `arxiv_attention_mechanisms_medical.md` | Self/cross attention |
+| `arxiv_medical_ontology_integration.md` | SNOMED, LOINC integration |
 
-Predictive models for acute care conditions.
+### 03_hybrid_neurosymbolic/ (7 documents)
+Neuro-symbolic AI with constraints.
 
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_sepsis_prediction.md](arxiv_sepsis_prediction.md) | Sepsis | AUROC 0.88-0.97 |
-| [arxiv_mortality_prediction_icu.md](arxiv_mortality_prediction_icu.md) | ICU Mortality | AUROC 0.80-0.98 |
-| [arxiv_clinical_risk_scores.md](arxiv_clinical_risk_scores.md) | Risk Scores | APACHE/SOFA enhancement |
-| [arxiv_aki_prediction.md](arxiv_aki_prediction.md) | Acute Kidney Injury | CNN AUROC 0.988 |
-| [arxiv_cardiac_arrest.md](arxiv_cardiac_arrest.md) | Cardiac Arrest | Early warning systems |
-| [arxiv_stroke_prediction.md](arxiv_stroke_prediction.md) | Stroke | Time-critical detection |
-| [arxiv_diagnosis_prediction.md](arxiv_diagnosis_prediction.md) | Diagnosis | Multi-label classification |
-| [arxiv_liver_ai.md](arxiv_liver_ai.md) | Liver Failure | MELD enhancement |
-| [arxiv_coagulopathy_ai.md](arxiv_coagulopathy_ai.md) | Coagulopathy | VTE, DIC prediction |
-| [arxiv_respiratory_ai.md](arxiv_respiratory_ai.md) | Respiratory Failure | ARDS detection |
-| [arxiv_fluid_ai.md](arxiv_fluid_ai.md) | Fluid Management | Hemodynamic optimization |
-| [arxiv_electrolyte_ai.md](arxiv_electrolyte_ai.md) | Electrolytes | Multi-ion prediction |
-| [arxiv_nutrition_ai.md](arxiv_nutrition_ai.md) | Nutrition | DeepEN 3.7% mortality reduction |
-| [arxiv_clinical_phenotyping.md](arxiv_clinical_phenotyping.md) | Phenotyping | Patient subtyping |
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_neurosymbolic_healthcare.md` | 60+ papers synthesized |
+| `arxiv_neurosymbolic_clinical_reasoning.md` | Clinical reasoning patterns |
+| `arxiv_hybrid_symbolic_neural.md` | 17% improvement |
+| `arxiv_constraint_satisfaction.md` | CP-SAT 18 seconds |
+| `arxiv_constraint_guided_generation.md` | Constrained generation |
+| `arxiv_guideline_encoding.md` | CQL, Arden Syntax |
+| `arxiv_clinical_pathways.md` | Protocol encoding |
 
 ---
 
-## Medical Specialties (11 documents)
+## Clinical Applications
 
-Specialty-specific AI applications.
+### 04_clinical_prediction/ (19 documents)
+Risk prediction and outcome forecasting.
 
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_trauma_ai.md](arxiv_trauma_ai.md) | Trauma | ISS prediction |
-| [arxiv_pediatric_ai.md](arxiv_pediatric_ai.md) | Pediatrics | pSOFA enhancement |
-| [arxiv_geriatric_ai.md](arxiv_geriatric_ai.md) | Geriatrics | Frailty scoring |
-| [arxiv_surgical_ai.md](arxiv_surgical_ai.md) | Surgery | SSI prediction |
-| [arxiv_pain_ai.md](arxiv_pain_ai.md) | Pain | CPOT automation |
-| [arxiv_obstetrics_ai.md](arxiv_obstetrics_ai.md) | Obstetrics | CTG 96.4% accuracy |
-| [arxiv_oncology_ai.md](arxiv_oncology_ai.md) | Oncology | 90-100% detection |
-| [arxiv_psychiatry_ai.md](arxiv_psychiatry_ai.md) | Psychiatry | Depression detection |
-| [arxiv_infectious_ai.md](arxiv_infectious_ai.md) | Infectious Disease | AMR MCC 0.926 |
-| [arxiv_cardiac_surgery_ai.md](arxiv_cardiac_surgery_ai.md) | Cardiac Surgery | surgVAE AUROC 0.831 |
-| [arxiv_neuro_icu_ai.md](arxiv_neuro_icu_ai.md) | Neuro ICU | ICP prediction |
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_sepsis_prediction.md` | AUROC 0.88-0.97, 6hr advance |
+| `arxiv_mortality_prediction_icu.md` | AUROC 0.85-0.98 |
+| `arxiv_aki_prediction.md` | AUROC 0.75-0.93 |
+| `arxiv_cardiac_arrest.md` | 6-hour early warning |
+| `arxiv_stroke_prediction.md` | Time-critical protocols |
+| `arxiv_clinical_risk_scores.md` | Risk stratification |
+| `arxiv_risk_stratification_models.md` | Model comparison |
+| `arxiv_diagnosis_prediction.md` | Diagnostic AI |
+| `arxiv_patient_outcome_prediction.md` | Outcome modeling |
+| `arxiv_icu_outcomes.md` | ICU-specific outcomes |
+| `arxiv_clinical_phenotyping.md` | Patient phenotypes |
+| `arxiv_lab_prediction.md` | Lab value forecasting |
+| `arxiv_patient_similarity_cohort.md` | Cohort identification |
+| `arxiv_medication_treatment_ai.md` | Treatment optimization |
+| `arxiv_sdoh_ai.md` | Social determinants |
+| `arxiv_cost_prediction_ai.md` | Cost modeling |
+| `arxiv_clinical_trial_ai_methods.md` | Trial optimization |
+| `clinical_trials_ai.md` | 3,106 AI/ML trials |
 
----
-
-## Clinical NLP & Text (5 documents)
-
+### 05_clinical_nlp/ (10 documents)
 Natural language processing for clinical text.
 
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_clinical_nlp.md](arxiv_clinical_nlp.md) | Clinical NLP | NER F1 88.8% |
-| [arxiv_clinical_qa.md](arxiv_clinical_qa.md) | Clinical QA | Answer extraction |
-| [arxiv_clinical_summarization.md](arxiv_clinical_summarization.md) | Summarization | Report generation |
-| [arxiv_clinical_nlg.md](arxiv_clinical_nlg.md) | Report Generation | RadGraph metrics |
-| [arxiv_adverse_events.md](arxiv_adverse_events.md) | Adverse Events | NLP detection |
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_clinical_nlp.md` | Comprehensive NLP survey |
+| `arxiv_medical_coding_ai.md` | 89%+ F1 ICD-10 |
+| `arxiv_cdi_documentation_ai.md` | E/M level prediction |
+| `arxiv_clinical_information_extraction.md` | Entity extraction |
+| `arxiv_clinical_summarization.md` | Note summarization |
+| `arxiv_clinical_note_generation.md` | Note generation |
+| `arxiv_clinical_qa.md` | Question answering |
+| `arxiv_clinical_question_answering.md` | QA systems |
+| `arxiv_clinical_nlg.md` | Natural language generation |
+| `arxiv_evidence_extraction_clinical.md` | Evidence extraction |
+
+### 06_medical_imaging/ (9 documents)
+Imaging, waveforms, and multimodal fusion.
+
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_chest_xray_ai.md` | CXR analysis |
+| `arxiv_ecg_deep_learning.md` | 95-99% accuracy |
+| `arxiv_multimodal_fusion.md` | Cross-modal attention |
+| `arxiv_multimodal_temporal_fusion.md` | Temporal alignment |
+| `arxiv_multimodal_clinical.md` | Multimodal architectures |
+| `arxiv_clinical_imaging_text.md` | Image-text fusion |
+| `arxiv_waveform_signal_clinical.md` | Waveform analysis |
+| `arxiv_vital_signs_ml.md` | Vital sign monitoring |
+| `arxiv_wearables_monitoring.md` | Wearable devices |
+
+### 07_specialty_domains/ (19 documents)
+Medical specialty-specific AI.
+
+| Document | Specialty |
+|----------|-----------|
+| `arxiv_oncology_ai.md` | Cancer/Oncology |
+| `arxiv_pediatric_ai.md` | Pediatrics |
+| `arxiv_psychiatry_ai.md` | Mental Health |
+| `arxiv_surgical_ai.md` | Surgery |
+| `arxiv_surgical_robotics.md` | Robotic Surgery |
+| `arxiv_cardiac_surgery_ai.md` | Cardiac Surgery |
+| `arxiv_obstetrics_ai.md` | Obstetrics |
+| `arxiv_geriatric_ai.md` | Geriatrics |
+| `arxiv_trauma_ai.md` | Trauma |
+| `arxiv_infectious_ai.md` | Infectious Disease |
+| `arxiv_respiratory_ai.md` | Respiratory |
+| `arxiv_liver_ai.md` | Hepatology |
+| `arxiv_neuro_icu_ai.md` | Neuro-ICU |
+| `arxiv_coagulopathy_ai.md` | Coagulopathy |
+| `arxiv_electrolyte_ai.md` | Electrolyte Management |
+| `arxiv_fluid_ai.md` | Fluid Management |
+| `arxiv_nutrition_ai.md` | Clinical Nutrition |
+| `arxiv_pain_ai.md` | Pain Management |
+| `arxiv_genomics_clinical.md` | Genomics |
+
+### 08_clinical_operations/ (8 documents)
+ED and hospital operations.
+
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_triage_ml.md` | Triage optimization |
+| `arxiv_ed_crowding.md` | ED flow management |
+| `arxiv_clinical_alerts.md` | Alert systems |
+| `arxiv_clinical_alert_fatigue.md` | 50%→75% precision |
+| `arxiv_discharge_disposition_ai.md` | Discharge planning |
+| `arxiv_hospital_resource_optimization.md` | Resource allocation |
+| `arxiv_workflow_ai.md` | Workflow optimization |
+| `arxiv_healthcare_process_mining.md` | Process mining |
 
 ---
 
-## Medical Imaging & Signals (4 documents)
+## Methods & Implementation
 
-Image and signal processing for clinical data.
+### 09_learning_methods/ (18 documents)
+Advanced ML techniques.
 
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_ecg_deep_learning.md](arxiv_ecg_deep_learning.md) | ECG AI | Arrhythmia detection |
-| [arxiv_chest_xray_ai.md](arxiv_chest_xray_ai.md) | Chest X-ray | Foundation models |
-| [arxiv_vital_signs_ml.md](arxiv_vital_signs_ml.md) | Vital Signs | Continuous monitoring |
-| [arxiv_lab_prediction.md](arxiv_lab_prediction.md) | Lab Values | Value forecasting |
+| Document | Topic |
+|----------|-------|
+| `arxiv_transfer_learning_clinical.md` | Domain adaptation |
+| `arxiv_clinical_transfer_learning.md` | Transfer methods |
+| `arxiv_contrastive_learning_medical.md` | Contrastive learning |
+| `arxiv_reinforcement_learning_clinical.md` | RL for treatment |
+| `arxiv_clinical_rl_simulation.md` | RL simulation |
+| `arxiv_clinical_simulation.md` | Clinical simulators |
+| `arxiv_causal_inference_ehr.md` | Causal inference |
+| `arxiv_healthcare_causal_discovery.md` | Causal discovery |
+| `arxiv_counterfactual_clinical.md` | Counterfactual reasoning |
+| `arxiv_diffusion_healthcare.md` | Diffusion models |
+| `arxiv_clinical_world_models.md` | World models |
+| `arxiv_teacher_student_clinical.md` | Knowledge distillation |
+| `arxiv_ensemble_clinical.md` | Ensemble methods |
+| `arxiv_ssm_clinical.md` | State-space models (Mamba) |
+| `arxiv_automl_healthcare.md` | AutoML |
+| `arxiv_healthcare_active_learning.md` | Active learning |
+| `arxiv_healthcare_continual_learning.md` | Continual learning |
+| `arxiv_clinical_decision_theory.md` | Decision theory |
 
----
+### 10_implementation_deployment/ (12 documents)
+Production deployment.
 
-## Advanced ML Methods (7 documents)
+| Document | Topic |
+|----------|-------|
+| `arxiv_clinical_ai_deployment.md` | Deployment patterns |
+| `arxiv_clinical_deployment.md` | Implementation |
+| `arxiv_mlops_healthcare.md` | MLOps practices |
+| `arxiv_federated_healthcare.md` | Federated learning |
+| `arxiv_privacy_preserving_clinical.md` | Privacy methods |
+| `arxiv_edge_ai_healthcare.md` | Edge deployment |
+| `arxiv_clinical_validation.md` | Validation frameworks |
+| `arxiv_clinical_benchmarks.md` | Benchmarking |
+| `arxiv_cross_institutional_learning.md` | Multi-site learning |
+| `arxiv_realtime_clinical_ai.md` | Real-time systems |
+| `arxiv_streaming_realtime_clinical.md` | Streaming inference |
+| `arxiv_healthcare_interop.md` | Interoperability |
 
-Cutting-edge machine learning techniques.
+### 11_interpretability_safety/ (10 documents)
+Explainability, fairness, and safety.
 
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_diffusion_healthcare.md](arxiv_diffusion_healthcare.md) | Diffusion Models | 40-65% over GANs |
-| [arxiv_ssm_clinical.md](arxiv_ssm_clinical.md) | State-Space Models | Mamba 2-100x faster |
-| [arxiv_foundation_models.md](arxiv_foundation_models.md) | Foundation Models | Med-PaLM 86.5% USMLE |
-| [arxiv_automl_healthcare.md](arxiv_automl_healthcare.md) | AutoML | 87-93% accuracy |
-| [arxiv_ensemble_clinical.md](arxiv_ensemble_clinical.md) | Ensemble Methods | AUROC 0.891 |
-| [arxiv_synthetic_clinical.md](arxiv_synthetic_clinical.md) | Synthetic Data | Privacy-preserving |
-| [arxiv_quantum_healthcare.md](arxiv_quantum_healthcare.md) | Quantum ML | 99.99% parameter reduction |
+| Document | Topic |
+|----------|-------|
+| `arxiv_explainable_ai_clinical.md` | XAI methods |
+| `arxiv_clinical_interpretability.md` | Interpretability |
+| `arxiv_uncertainty_medical.md` | Uncertainty quantification |
+| `arxiv_clinical_uncertainty_quantification.md` | Calibration |
+| `arxiv_healthcare_fairness_equity.md` | Fairness |
+| `arxiv_clinical_safety_monitoring.md` | Safety monitoring |
+| `arxiv_adverse_events.md` | Adverse event detection |
+| `arxiv_human_ai_clinical.md` | Human-AI collaboration |
+| `arxiv_healthcare_human_factors.md` | Human factors |
+| `arxiv_clinical_decision_thresholds.md` | Decision thresholds |
 
----
+### 12_data_quality/ (6 documents)
+Data handling and quality.
 
-## Clinical Operations (12 documents)
+| Document | Topic |
+|----------|-------|
+| `arxiv_ehr_data_quality.md` | EHR quality |
+| `arxiv_clinical_missing_data.md` | Missing data |
+| `arxiv_synthetic_clinical.md` | Synthetic data |
+| `arxiv_clinical_data_augmentation.md` | Augmentation |
+| `arxiv_medical_entity_resolution.md` | Entity resolution |
+| `arxiv_clinical_anomaly_detection.md` | Anomaly detection |
 
-Operational and workflow AI applications.
+### 13_emerging_technology/ (9 documents)
+Cutting-edge methods.
 
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_ed_crowding.md](arxiv_ed_crowding.md) | ED Crowding | Meta-learning 85.7% |
-| [arxiv_icu_outcomes.md](arxiv_icu_outcomes.md) | ICU Outcomes | Ventilation weaning 98% |
-| [arxiv_triage_ml.md](arxiv_triage_ml.md) | ED Triage | KATE 75.9% accuracy |
-| [arxiv_clinical_alerts.md](arxiv_clinical_alerts.md) | Alert Optimization | 54% FP reduction |
-| [arxiv_workflow_ai.md](arxiv_workflow_ai.md) | Workflow AI | 22-97% improvement |
-| [arxiv_cost_prediction_ai.md](arxiv_cost_prediction_ai.md) | Cost Prediction | $7.3M savings |
-| [arxiv_sdoh_ai.md](arxiv_sdoh_ai.md) | Social Determinants | 32% more detection |
-| [arxiv_ddi_knowledge_graphs.md](arxiv_ddi_knowledge_graphs.md) | Drug Interactions | GNN F1 0.95 |
-| [arxiv_multimodal_fusion.md](arxiv_multimodal_fusion.md) | Multimodal Fusion | +3-8% AUROC |
-| [arxiv_multimodal_clinical.md](arxiv_multimodal_clinical.md) | Multimodal AI | Cross-modal learning |
-| [arxiv_wearables_monitoring.md](arxiv_wearables_monitoring.md) | Wearables | 8.2hr sepsis warning |
-| [arxiv_ehr_data_quality.md](arxiv_ehr_data_quality.md) | Data Quality | GRU-D +3-5% |
-
----
-
-## Human-AI & Explainability (4 documents)
-
-Human factors and interpretability.
-
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_human_ai_clinical.md](arxiv_human_ai_clinical.md) | Human-AI Teaming | 21% over-reliance reduction |
-| [arxiv_explainable_ai_clinical.md](arxiv_explainable_ai_clinical.md) | Explainable AI | 45 papers |
-| [arxiv_clinical_interpretability.md](arxiv_clinical_interpretability.md) | Interpretability | EU AI Act compliance |
-| [arxiv_clinical_decision_theory.md](arxiv_clinical_decision_theory.md) | Decision Theory | MCDA frameworks |
-
----
-
-## Implementation & Deployment (13 documents)
-
-Production and regulatory considerations.
-
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_clinical_ai_deployment.md](arxiv_clinical_ai_deployment.md) | AI Deployment | FDA lifecycle |
-| [arxiv_clinical_deployment.md](arxiv_clinical_deployment.md) | Clinical Deployment | 78% adoption week 6 |
-| [arxiv_clinical_validation.md](arxiv_clinical_validation.md) | Validation | 10-30% degradation |
-| [arxiv_clinical_benchmarks.md](arxiv_clinical_benchmarks.md) | Benchmarks | MIMIC, eICU standards |
-| [arxiv_fda_ai_guidance.md](arxiv_fda_ai_guidance.md) | FDA Guidance | PCCP, GMLP |
-| [arxiv_mlops_healthcare.md](arxiv_mlops_healthcare.md) | MLOps | CI/CD for clinical |
-| [arxiv_healthcare_interop.md](arxiv_healthcare_interop.md) | Interoperability | FHIR, CDS Hooks |
-| [arxiv_clinical_pathways.md](arxiv_clinical_pathways.md) | Clinical Pathways | 97.8% fitness |
-| [arxiv_clinical_simulation.md](arxiv_clinical_simulation.md) | Simulation | AIPatient 94.15% |
-| [arxiv_surgical_robotics.md](arxiv_surgical_robotics.md) | Surgical Robotics | 92-95% skill |
-| [arxiv_genomics_clinical.md](arxiv_genomics_clinical.md) | Genomics | 98% variant classification |
-| [arxiv_federated_healthcare.md](arxiv_federated_healthcare.md) | Federated Learning | Real deployments |
-| [arxiv_realtime_clinical_ai.md](arxiv_realtime_clinical_ai.md) | Real-time ML | <200ms latency |
-
----
-
-## Emerging Technologies (7 documents)
-
-Next-generation clinical AI approaches.
-
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_llm_clinical.md](arxiv_llm_clinical.md) | LLM Clinical | RAG +22% accuracy |
-| [arxiv_llm_agents_healthcare.md](arxiv_llm_agents_healthcare.md) | LLM Agents | 81-93% diagnostic |
-| [arxiv_medical_llm_evaluation.md](arxiv_medical_llm_evaluation.md) | LLM Evaluation | GPT-4 86.7% USMLE |
-| [arxiv_edge_ai_healthcare.md](arxiv_edge_ai_healthcare.md) | Edge AI | 99.7% ECG <50mW |
-| [arxiv_digital_twins_healthcare.md](arxiv_digital_twins_healthcare.md) | Digital Twins | 89-93% prediction |
-| [arxiv_voice_ai_healthcare.md](arxiv_voice_ai_healthcare.md) | Voice AI | 97% Parkinson's |
-| [arxiv_ambient_ai_healthcare.md](arxiv_ambient_ai_healthcare.md) | Ambient AI | 94-97% satisfaction |
+| Document | Topic |
+|----------|-------|
+| `arxiv_foundation_models.md` | Foundation models |
+| `arxiv_llm_clinical.md` | Clinical LLMs |
+| `arxiv_llm_clinical_reasoning.md` | LLM reasoning |
+| `arxiv_llm_agents_healthcare.md` | LLM agents |
+| `arxiv_medical_llm_evaluation.md` | LLM evaluation |
+| `arxiv_digital_twins_healthcare.md` | Digital twins |
+| `arxiv_quantum_healthcare.md` | Quantum computing |
+| `arxiv_ambient_ai_healthcare.md` | Ambient AI |
+| `arxiv_voice_ai_healthcare.md` | Voice AI |
 
 ---
 
-## Concept Note Aligned Documents (48 NEW)
+## Document Format
 
-These documents were added to align with the CRCV lab concept note for temporal knowledge graphs, neuro-symbolic reasoning, and clinical auto-coding.
+Each research document follows a consistent structure:
 
-### Priority 1 - Critical for Concept Note (4 documents)
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_medical_coding_ai.md](arxiv_medical_coding_ai.md) | ICD-10/CPT Auto-coding | Hierarchical attention 89% F1 |
-| [arxiv_cdi_documentation_ai.md](arxiv_cdi_documentation_ai.md) | CDI/E/M Documentation | 15-25% query reduction |
-| [arxiv_sequence_diffusion.md](arxiv_sequence_diffusion.md) | Diffusion over Trajectories | Continuous-time modeling |
-| [arxiv_counterfactual_clinical.md](arxiv_counterfactual_clinical.md) | Counterfactual Reasoning | What-if analysis |
-
-### Priority 2 - Strengthen Coverage (4 documents)
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_temporal_gnn.md](arxiv_temporal_gnn.md) | Dynamic/Temporal GNNs | DyRep, TGN architectures |
-| [arxiv_clinical_world_models.md](arxiv_clinical_world_models.md) | Clinical World Models | Simulation + planning |
-| [arxiv_graph_diffusion.md](arxiv_graph_diffusion.md) | Graph Generation/Diffusion | Structure generation |
-| [arxiv_event_sequence_clinical.md](arxiv_event_sequence_clinical.md) | Event Sequence Modeling | Temporal point processes |
-
-### Priority 3 - Extended Coverage (8 documents)
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_constraint_guided_generation.md](arxiv_constraint_guided_generation.md) | Constraint-Guided Generation | Safe trajectory synthesis |
-| [arxiv_teacher_student_clinical.md](arxiv_teacher_student_clinical.md) | Teacher-Student Distillation | PHI-safe deployment |
-| [arxiv_multimodal_temporal_fusion.md](arxiv_multimodal_temporal_fusion.md) | Multimodal Temporal Fusion | Cross-modal alignment |
-| [arxiv_clinical_rl_simulation.md](arxiv_clinical_rl_simulation.md) | Clinical RL/Simulation | Policy learning |
-| [arxiv_neurosymbolic_clinical_reasoning.md](arxiv_neurosymbolic_clinical_reasoning.md) | Neuro-Symbolic Clinical | Logic + neural |
-| [arxiv_evidence_extraction_clinical.md](arxiv_evidence_extraction_clinical.md) | Evidence Extraction | Justification chains |
-| [arxiv_clinical_uncertainty_quantification.md](arxiv_clinical_uncertainty_quantification.md) | Clinical Uncertainty | Calibrated predictions |
-| [arxiv_streaming_realtime_clinical.md](arxiv_streaming_realtime_clinical.md) | Streaming Real-time | Online inference |
-
-### Extended Research (32 documents)
-| Document | Topic | Key Finding |
-|----------|-------|-------------|
-| [arxiv_llm_clinical_reasoning.md](arxiv_llm_clinical_reasoning.md) | LLM Clinical Reasoning | Chain-of-thought medical |
-| [arxiv_clinical_data_augmentation.md](arxiv_clinical_data_augmentation.md) | Data Augmentation | Synthetic expansion |
-| [arxiv_medical_ontology_integration.md](arxiv_medical_ontology_integration.md) | Ontology Integration | SNOMED/UMLS linking |
-| [arxiv_clinical_trial_ai_methods.md](arxiv_clinical_trial_ai_methods.md) | Clinical Trial AI | Patient matching |
-| [arxiv_waveform_signal_clinical.md](arxiv_waveform_signal_clinical.md) | Waveform/Signal Analysis | ECG/EEG deep learning |
-| [arxiv_clinical_note_generation.md](arxiv_clinical_note_generation.md) | Clinical Note Generation | Documentation AI |
-| [arxiv_patient_similarity_cohort.md](arxiv_patient_similarity_cohort.md) | Patient Similarity | Cohort discovery |
-| [arxiv_clinical_alert_fatigue.md](arxiv_clinical_alert_fatigue.md) | Alert Fatigue Reduction | Smart filtering |
-| [arxiv_medication_treatment_ai.md](arxiv_medication_treatment_ai.md) | Medication/Treatment AI | Drug selection |
-| [arxiv_risk_stratification_models.md](arxiv_risk_stratification_models.md) | Risk Stratification | Multi-outcome models |
-| [arxiv_clinical_question_answering.md](arxiv_clinical_question_answering.md) | Clinical QA | Medical QA systems |
-| [arxiv_cross_institutional_learning.md](arxiv_cross_institutional_learning.md) | Cross-Institutional | Multi-site learning |
-| [arxiv_discharge_disposition_ai.md](arxiv_discharge_disposition_ai.md) | Discharge Disposition | Placement prediction |
-| [arxiv_clinical_embeddings_representations.md](arxiv_clinical_embeddings_representations.md) | Clinical Embeddings | Deep representations |
-| [arxiv_healthcare_process_mining.md](arxiv_healthcare_process_mining.md) | Process Mining | Workflow analysis |
-| [arxiv_clinical_anomaly_detection.md](arxiv_clinical_anomaly_detection.md) | Anomaly Detection | Outlier identification |
-| [arxiv_clinical_safety_monitoring.md](arxiv_clinical_safety_monitoring.md) | Safety Monitoring | Adverse event detection |
-| [arxiv_hospital_resource_optimization.md](arxiv_hospital_resource_optimization.md) | Resource Optimization | Capacity planning |
-| [arxiv_clinical_information_extraction.md](arxiv_clinical_information_extraction.md) | Information Extraction | Entity/relation extraction |
-| [arxiv_healthcare_causal_discovery.md](arxiv_healthcare_causal_discovery.md) | Causal Discovery | Structure learning |
-| [arxiv_clinical_imaging_text.md](arxiv_clinical_imaging_text.md) | Imaging-Text Fusion | Radiology AI |
-| [arxiv_healthcare_fairness_equity.md](arxiv_healthcare_fairness_equity.md) | Fairness/Equity | Bias mitigation |
-| [arxiv_clinical_transfer_learning.md](arxiv_clinical_transfer_learning.md) | Clinical Transfer Learning | Domain adaptation |
-| [arxiv_healthcare_active_learning.md](arxiv_healthcare_active_learning.md) | Active Learning | Efficient labeling |
-| [arxiv_clinical_time_series_forecasting.md](arxiv_clinical_time_series_forecasting.md) | Time Series Forecasting | Temporal prediction |
-| [arxiv_patient_outcome_prediction.md](arxiv_patient_outcome_prediction.md) | Outcome Prediction | Multi-task learning |
-| [arxiv_clinical_missing_data.md](arxiv_clinical_missing_data.md) | Missing Data Handling | Imputation methods |
-| [arxiv_healthcare_continual_learning.md](arxiv_healthcare_continual_learning.md) | Continual Learning | Lifelong adaptation |
-| [arxiv_clinical_graph_construction.md](arxiv_clinical_graph_construction.md) | Graph Construction | EHR-to-graph methods |
-| [arxiv_healthcare_human_factors.md](arxiv_healthcare_human_factors.md) | Human Factors | Cognitive load, trust |
-| [arxiv_clinical_decision_thresholds.md](arxiv_clinical_decision_thresholds.md) | Decision Thresholds | Threshold optimization |
-| [arxiv_medical_entity_resolution.md](arxiv_medical_entity_resolution.md) | Entity Resolution | Deduplication/linking |
+1. **Executive Summary** — Key findings in 2-3 paragraphs
+2. **Key Papers** — ArXiv IDs with citations
+3. **Performance Metrics** — AUROC, F1, accuracy tables
+4. **Architectural Details** — Model architectures, training
+5. **Clinical Applications** — Real-world use cases
+6. **Research Gaps** — Open problems identified
+7. **Relevance to Project** — Connection to our goals
 
 ---
 
-**Last Updated:** December 2025
+<p align="center">
+  <strong>Last Updated:</strong> December 2025
+</p>
