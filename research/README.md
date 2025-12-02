@@ -1,7 +1,7 @@
 # Research Literature Corpus
 
 <p align="center">
-  <strong>157 documents</strong> &nbsp;|&nbsp; <strong>197,000+ lines</strong> &nbsp;|&nbsp; <strong>2,000+ ArXiv papers</strong>
+  <strong>158 documents</strong> &nbsp;|&nbsp; <strong>200,000+ lines</strong> &nbsp;|&nbsp; <strong>2,000+ ArXiv papers</strong>
 </p>
 
 Comprehensive literature syntheses covering every major topic in clinical AI for acute care.
@@ -28,6 +28,7 @@ Comprehensive literature syntheses covering every major topic in clinical AI for
 | [11_interpretability_safety/](11_interpretability_safety/) | 10 | XAI, fairness, safety |
 | [12_data_quality/](12_data_quality/) | 6 | Missing data, synthetic, augmentation |
 | [13_emerging_technology/](13_emerging_technology/) | 9 | LLMs, digital twins, quantum |
+| [14_agentic_medical_ai/](14_agentic_medical_ai/) | 1 | Agentic reasoning, evidence-based diagnosis |
 
 ---
 
@@ -291,6 +292,15 @@ Cutting-edge methods.
 | `arxiv_quantum_healthcare.md` | Quantum computing |
 | `arxiv_ambient_ai_healthcare.md` | Ambient AI |
 | `arxiv_voice_ai_healthcare.md` | Voice AI |
+
+### 14_agentic_medical_ai/ (1 document)
+LLM-based agentic systems for clinical reasoning.
+
+| Document | Key Finding |
+|----------|-------------|
+| `arxiv_medagent_pro.md` | Hierarchical agentic reasoning: +34% over GPT-4o on glaucoma |
+
+**Key insight:** Agentic systems that mirror clinical workflows (disease-level planning → patient-level reasoning) dramatically outperform both VLMs and existing medical agents. Validates structured reasoning approach.
 
 ---
 
