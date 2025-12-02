@@ -1,6 +1,6 @@
 # Research Literature Corpus
 
-**109 documents | 141,065+ lines | 1,500+ ArXiv papers synthesized**
+**157 documents | 197,000+ lines | 2,000+ ArXiv papers synthesized**
 
 This folder contains comprehensive literature syntheses covering every major topic in clinical AI for acute care settings.
 
@@ -211,6 +211,76 @@ Next-generation clinical AI approaches.
 | [arxiv_digital_twins_healthcare.md](arxiv_digital_twins_healthcare.md) | Digital Twins | 89-93% prediction |
 | [arxiv_voice_ai_healthcare.md](arxiv_voice_ai_healthcare.md) | Voice AI | 97% Parkinson's |
 | [arxiv_ambient_ai_healthcare.md](arxiv_ambient_ai_healthcare.md) | Ambient AI | 94-97% satisfaction |
+
+---
+
+## Concept Note Aligned Documents (48 NEW)
+
+These documents were added to align with the CRCV lab concept note for temporal knowledge graphs, neuro-symbolic reasoning, and clinical auto-coding.
+
+### Priority 1 - Critical for Concept Note (4 documents)
+| Document | Topic | Key Finding |
+|----------|-------|-------------|
+| [arxiv_medical_coding_ai.md](arxiv_medical_coding_ai.md) | ICD-10/CPT Auto-coding | Hierarchical attention 89% F1 |
+| [arxiv_cdi_documentation_ai.md](arxiv_cdi_documentation_ai.md) | CDI/E/M Documentation | 15-25% query reduction |
+| [arxiv_sequence_diffusion.md](arxiv_sequence_diffusion.md) | Diffusion over Trajectories | Continuous-time modeling |
+| [arxiv_counterfactual_clinical.md](arxiv_counterfactual_clinical.md) | Counterfactual Reasoning | What-if analysis |
+
+### Priority 2 - Strengthen Coverage (4 documents)
+| Document | Topic | Key Finding |
+|----------|-------|-------------|
+| [arxiv_temporal_gnn.md](arxiv_temporal_gnn.md) | Dynamic/Temporal GNNs | DyRep, TGN architectures |
+| [arxiv_clinical_world_models.md](arxiv_clinical_world_models.md) | Clinical World Models | Simulation + planning |
+| [arxiv_graph_diffusion.md](arxiv_graph_diffusion.md) | Graph Generation/Diffusion | Structure generation |
+| [arxiv_event_sequence_clinical.md](arxiv_event_sequence_clinical.md) | Event Sequence Modeling | Temporal point processes |
+
+### Priority 3 - Extended Coverage (8 documents)
+| Document | Topic | Key Finding |
+|----------|-------|-------------|
+| [arxiv_constraint_guided_generation.md](arxiv_constraint_guided_generation.md) | Constraint-Guided Generation | Safe trajectory synthesis |
+| [arxiv_teacher_student_clinical.md](arxiv_teacher_student_clinical.md) | Teacher-Student Distillation | PHI-safe deployment |
+| [arxiv_multimodal_temporal_fusion.md](arxiv_multimodal_temporal_fusion.md) | Multimodal Temporal Fusion | Cross-modal alignment |
+| [arxiv_clinical_rl_simulation.md](arxiv_clinical_rl_simulation.md) | Clinical RL/Simulation | Policy learning |
+| [arxiv_neurosymbolic_clinical_reasoning.md](arxiv_neurosymbolic_clinical_reasoning.md) | Neuro-Symbolic Clinical | Logic + neural |
+| [arxiv_evidence_extraction_clinical.md](arxiv_evidence_extraction_clinical.md) | Evidence Extraction | Justification chains |
+| [arxiv_clinical_uncertainty_quantification.md](arxiv_clinical_uncertainty_quantification.md) | Clinical Uncertainty | Calibrated predictions |
+| [arxiv_streaming_realtime_clinical.md](arxiv_streaming_realtime_clinical.md) | Streaming Real-time | Online inference |
+
+### Extended Research (32 documents)
+| Document | Topic | Key Finding |
+|----------|-------|-------------|
+| [arxiv_llm_clinical_reasoning.md](arxiv_llm_clinical_reasoning.md) | LLM Clinical Reasoning | Chain-of-thought medical |
+| [arxiv_clinical_data_augmentation.md](arxiv_clinical_data_augmentation.md) | Data Augmentation | Synthetic expansion |
+| [arxiv_medical_ontology_integration.md](arxiv_medical_ontology_integration.md) | Ontology Integration | SNOMED/UMLS linking |
+| [arxiv_clinical_trial_ai_methods.md](arxiv_clinical_trial_ai_methods.md) | Clinical Trial AI | Patient matching |
+| [arxiv_waveform_signal_clinical.md](arxiv_waveform_signal_clinical.md) | Waveform/Signal Analysis | ECG/EEG deep learning |
+| [arxiv_clinical_note_generation.md](arxiv_clinical_note_generation.md) | Clinical Note Generation | Documentation AI |
+| [arxiv_patient_similarity_cohort.md](arxiv_patient_similarity_cohort.md) | Patient Similarity | Cohort discovery |
+| [arxiv_clinical_alert_fatigue.md](arxiv_clinical_alert_fatigue.md) | Alert Fatigue Reduction | Smart filtering |
+| [arxiv_medication_treatment_ai.md](arxiv_medication_treatment_ai.md) | Medication/Treatment AI | Drug selection |
+| [arxiv_risk_stratification_models.md](arxiv_risk_stratification_models.md) | Risk Stratification | Multi-outcome models |
+| [arxiv_clinical_question_answering.md](arxiv_clinical_question_answering.md) | Clinical QA | Medical QA systems |
+| [arxiv_cross_institutional_learning.md](arxiv_cross_institutional_learning.md) | Cross-Institutional | Multi-site learning |
+| [arxiv_discharge_disposition_ai.md](arxiv_discharge_disposition_ai.md) | Discharge Disposition | Placement prediction |
+| [arxiv_clinical_embeddings_representations.md](arxiv_clinical_embeddings_representations.md) | Clinical Embeddings | Deep representations |
+| [arxiv_healthcare_process_mining.md](arxiv_healthcare_process_mining.md) | Process Mining | Workflow analysis |
+| [arxiv_clinical_anomaly_detection.md](arxiv_clinical_anomaly_detection.md) | Anomaly Detection | Outlier identification |
+| [arxiv_clinical_safety_monitoring.md](arxiv_clinical_safety_monitoring.md) | Safety Monitoring | Adverse event detection |
+| [arxiv_hospital_resource_optimization.md](arxiv_hospital_resource_optimization.md) | Resource Optimization | Capacity planning |
+| [arxiv_clinical_information_extraction.md](arxiv_clinical_information_extraction.md) | Information Extraction | Entity/relation extraction |
+| [arxiv_healthcare_causal_discovery.md](arxiv_healthcare_causal_discovery.md) | Causal Discovery | Structure learning |
+| [arxiv_clinical_imaging_text.md](arxiv_clinical_imaging_text.md) | Imaging-Text Fusion | Radiology AI |
+| [arxiv_healthcare_fairness_equity.md](arxiv_healthcare_fairness_equity.md) | Fairness/Equity | Bias mitigation |
+| [arxiv_clinical_transfer_learning.md](arxiv_clinical_transfer_learning.md) | Clinical Transfer Learning | Domain adaptation |
+| [arxiv_healthcare_active_learning.md](arxiv_healthcare_active_learning.md) | Active Learning | Efficient labeling |
+| [arxiv_clinical_time_series_forecasting.md](arxiv_clinical_time_series_forecasting.md) | Time Series Forecasting | Temporal prediction |
+| [arxiv_patient_outcome_prediction.md](arxiv_patient_outcome_prediction.md) | Outcome Prediction | Multi-task learning |
+| [arxiv_clinical_missing_data.md](arxiv_clinical_missing_data.md) | Missing Data Handling | Imputation methods |
+| [arxiv_healthcare_continual_learning.md](arxiv_healthcare_continual_learning.md) | Continual Learning | Lifelong adaptation |
+| [arxiv_clinical_graph_construction.md](arxiv_clinical_graph_construction.md) | Graph Construction | EHR-to-graph methods |
+| [arxiv_healthcare_human_factors.md](arxiv_healthcare_human_factors.md) | Human Factors | Cognitive load, trust |
+| [arxiv_clinical_decision_thresholds.md](arxiv_clinical_decision_thresholds.md) | Decision Thresholds | Threshold optimization |
+| [arxiv_medical_entity_resolution.md](arxiv_medical_entity_resolution.md) | Entity Resolution | Deduplication/linking |
 
 ---
 
