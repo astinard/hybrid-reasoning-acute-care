@@ -1,7 +1,7 @@
 # Research Literature Corpus
 
 <p align="center">
-  <strong>158 documents</strong> &nbsp;|&nbsp; <strong>200,000+ lines</strong> &nbsp;|&nbsp; <strong>2,000+ ArXiv papers</strong>
+  <strong>162 documents</strong> &nbsp;|&nbsp; <strong>210,000+ lines</strong> &nbsp;|&nbsp; <strong>2,000+ ArXiv papers</strong>
 </p>
 
 Comprehensive literature syntheses covering every major topic in clinical AI for acute care.
@@ -28,7 +28,7 @@ Comprehensive literature syntheses covering every major topic in clinical AI for
 | [11_interpretability_safety/](11_interpretability_safety/) | 10 | XAI, fairness, safety |
 | [12_data_quality/](12_data_quality/) | 6 | Missing data, synthetic, augmentation |
 | [13_emerging_technology/](13_emerging_technology/) | 9 | LLMs, digital twins, quantum |
-| [14_agentic_medical_ai/](14_agentic_medical_ai/) | 1 | Agentic reasoning, evidence-based diagnosis |
+| [14_agentic_medical_ai/](14_agentic_medical_ai/) | 5 | Agentic reasoning, multi-agent diagnosis |
 
 ---
 
@@ -293,14 +293,25 @@ Cutting-edge methods.
 | `arxiv_ambient_ai_healthcare.md` | Ambient AI |
 | `arxiv_voice_ai_healthcare.md` | Voice AI |
 
-### 14_agentic_medical_ai/ (1 document)
+### 14_agentic_medical_ai/ (5 documents)
 LLM-based agentic systems for clinical reasoning.
 
 | Document | Key Finding |
 |----------|-------------|
 | `arxiv_medagent_pro.md` | Hierarchical agentic reasoning: +34% over GPT-4o on glaucoma |
+| `arxiv_kg4diagnosis.md` | Knowledge graph + multi-agent: 362 diseases, +11.6% accuracy |
+| `arxiv_mdagents.md` | Adaptive complexity routing: SOTA on 7/10 benchmarks |
+| `arxiv_pathfinder.md` | Role-specialized agents: 74% vs 65% human pathologists |
+| `arxiv_mmedagent.md` | Tool-learning agent: 6 tools, 5 modalities, +7.6% avg |
 
-**Key insight:** Agentic systems that mirror clinical workflows (disease-level planning → patient-level reasoning) dramatically outperform both VLMs and existing medical agents. Validates structured reasoning approach.
+**Key insights:**
+- Hierarchical planning (disease → patient level) beats flat approaches
+- Adaptive complexity routing saves compute while improving accuracy
+- Role specialization outperforms generic agents
+- Tool orchestration beats end-to-end training
+- Knowledge graphs provide structured enhancement over RAG
+
+**Your differentiation:** All 5 papers operate on single-timepoint data. Your temporal reasoning adds the **time dimension** for acute care.
 
 ---
 
