@@ -2,7 +2,7 @@
 
 LLM-based agent systems for clinical reasoning and diagnosis.
 
-## Documents (5)
+## Documents (6)
 
 | Document | Topic | Key Finding |
 |----------|-------|-------------|
@@ -11,6 +11,7 @@ LLM-based agent systems for clinical reasoning and diagnosis.
 | `arxiv_mdagents.md` | Adaptive complexity-based collaboration | SOTA on 7/10 benchmarks |
 | `arxiv_pathfinder.md` | Multi-agent histopathology | 74% vs 65% human pathologists |
 | `arxiv_mmedagent.md` | Tool-learning multi-modal agent | 6 tools, 5 modalities |
+| `arxiv_ace_context_engineering.md` | **Evolving context playbooks** | **+10.6% agents, 86.9% faster** |
 
 ---
 
@@ -31,11 +32,14 @@ MMedAgent shows **training agents to select specialized tools** outperforms trai
 ### 5. Knowledge Graphs Improve Diagnosis
 KG4Diagnosis achieves +11.6% accuracy by integrating Neo4j knowledge graph with LLM agents — structured relations beat unstructured retrieval.
 
+### 6. Contexts Should Evolve, Not Be Static (NEW - Game Changer)
+ACE proves that **evolving playbooks** that accumulate strategies through Generator→Reflector→Curator loops dramatically outperform static prompts. The system achieves self-improvement **without labeled supervision** using execution feedback alone. Open-source DeepSeek matches proprietary GPT-4.1 agents on AppWorld leaderboard.
+
 ---
 
 ## Relevance to Your Project
 
-All 5 papers validate core architectural choices in your temporal reasoning approach:
+All 6 papers validate and **extend** core architectural choices in your temporal reasoning approach:
 
 | Paper Finding | Your Architecture |
 |---------------|-------------------|
@@ -44,18 +48,21 @@ All 5 papers validate core architectural choices in your temporal reasoning appr
 | Role specialization (PathFinder) | Specialized temporal agents |
 | Tool orchestration (MMedAgent) | Constraint satisfaction tools |
 | KG enhancement (KG4Diagnosis) | Temporal knowledge graph |
+| **Evolving playbooks (ACE)** | **Self-improving temporal patterns** |
 
-**Your differentiation:** All these papers operate on **single-timepoint** data. Your temporal reasoning adds the **time dimension** — where severity evolves, patterns emerge over time, and **when matters as much as what**.
+**Your differentiation:** Previous papers operate on **single-timepoint** data. Your temporal reasoning adds the **time dimension**.
+
+**ACE adds a new dimension:** Your system shouldn't have static guidelines — it should have **evolving clinical playbooks** that accumulate temporal patterns, refine thresholds, and learn from patient outcomes. This enables **self-improving acute care AI**.
 
 ---
 
 ## Architecture Synthesis
 
-Combining insights from all 5 papers into a unified temporal agentic framework:
+Combining insights from all 6 papers into a unified **self-improving** temporal agentic framework:
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
-│                    TEMPORAL ACUTE CARE AGENT                        │
+│              SELF-IMPROVING TEMPORAL ACUTE CARE AGENT               │
 ├────────────────────────────────────────────────────────────────────┤
 │                                                                      │
 │  1. COMPLEXITY ASSESSMENT (MDAgents)                                │
@@ -79,9 +86,47 @@ Combining insights from all 5 papers into a unified temporal agentic framework:
 │     ├─ SepsisScorer: SOFA/qSOFA calculation                         │
 │     └─ ConstraintChecker: Guideline compliance                      │
 │                                                                      │
+│  6. EVOLVING PLAYBOOK SYSTEM (ACE) ← NEW                            │
+│     ├─ Generator: Process patient streams, flag helpful patterns    │
+│     ├─ Reflector: Analyze outcomes, extract temporal insights       │
+│     ├─ Curator: Update clinical playbook with delta entries         │
+│     └─ Result: System improves with every patient encounter         │
+│                                                                      │
 └────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-**Bottom Line:** The agentic medical AI field is converging on hierarchical, tool-using, knowledge-enhanced architectures. Your temporal reasoning framework slots naturally into this paradigm — adding the time dimension that all current systems lack.
+## The ACE Evolution: Why This Changes Everything
+
+ACE (arXiv:2510.04618) introduces a paradigm shift that should fundamentally change your approach:
+
+### Before ACE
+- Static clinical guidelines
+- Fixed constraint rules
+- Pre-defined alert thresholds
+- One-time knowledge graph training
+
+### After ACE
+- **Evolving clinical playbooks** that accumulate temporal patterns
+- **Learned constraint refinements** from patient outcomes
+- **Adaptive thresholds** that improve with experience
+- **Continuously enriched TKG** through reflection loops
+
+### The Self-Improvement Loop
+
+```
+Patient Data → Generator (apply current playbook)
+                    ↓
+            Reflector (analyze outcomes)
+                    ↓
+            Curator (delta updates to playbook)
+                    ↓
+            Improved playbook for next patient
+```
+
+**Key finding:** ACE achieves this self-improvement **without labeled supervision** — using only execution feedback (patient outcomes).
+
+---
+
+**Bottom Line:** The agentic medical AI field is converging on hierarchical, tool-using, knowledge-enhanced architectures. ACE adds **self-improvement** to this paradigm. Your temporal reasoning framework should evolve from static constraints to **evolving temporal playbooks** — enabling acute care AI that gets better with every patient.

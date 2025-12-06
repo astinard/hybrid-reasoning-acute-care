@@ -1,7 +1,7 @@
 # Research Literature Corpus
 
 <p align="center">
-  <strong>162 documents</strong> &nbsp;|&nbsp; <strong>210,000+ lines</strong> &nbsp;|&nbsp; <strong>2,000+ ArXiv papers</strong>
+  <strong>163 documents</strong> &nbsp;|&nbsp; <strong>215,000+ lines</strong> &nbsp;|&nbsp; <strong>2,000+ ArXiv papers</strong>
 </p>
 
 Comprehensive literature syntheses covering every major topic in clinical AI for acute care.
@@ -28,7 +28,7 @@ Comprehensive literature syntheses covering every major topic in clinical AI for
 | [11_interpretability_safety/](11_interpretability_safety/) | 10 | XAI, fairness, safety |
 | [12_data_quality/](12_data_quality/) | 6 | Missing data, synthetic, augmentation |
 | [13_emerging_technology/](13_emerging_technology/) | 9 | LLMs, digital twins, quantum |
-| [14_agentic_medical_ai/](14_agentic_medical_ai/) | 5 | Agentic reasoning, multi-agent diagnosis |
+| [14_agentic_medical_ai/](14_agentic_medical_ai/) | 6 | Agentic reasoning, self-improving AI |
 
 ---
 
@@ -293,8 +293,8 @@ Cutting-edge methods.
 | `arxiv_ambient_ai_healthcare.md` | Ambient AI |
 | `arxiv_voice_ai_healthcare.md` | Voice AI |
 
-### 14_agentic_medical_ai/ (5 documents)
-LLM-based agentic systems for clinical reasoning.
+### 14_agentic_medical_ai/ (6 documents)
+LLM-based agentic systems for clinical reasoning and self-improvement.
 
 | Document | Key Finding |
 |----------|-------------|
@@ -303,6 +303,7 @@ LLM-based agentic systems for clinical reasoning.
 | `arxiv_mdagents.md` | Adaptive complexity routing: SOTA on 7/10 benchmarks |
 | `arxiv_pathfinder.md` | Role-specialized agents: 74% vs 65% human pathologists |
 | `arxiv_mmedagent.md` | Tool-learning agent: 6 tools, 5 modalities, +7.6% avg |
+| `arxiv_ace_context_engineering.md` | **Evolving playbooks: +10.6%, 86.9% faster, matches GPT-4.1** |
 
 **Key insights:**
 - Hierarchical planning (disease → patient level) beats flat approaches
@@ -310,8 +311,11 @@ LLM-based agentic systems for clinical reasoning.
 - Role specialization outperforms generic agents
 - Tool orchestration beats end-to-end training
 - Knowledge graphs provide structured enhancement over RAG
+- **Evolving contexts beat static prompts — self-improvement without labels**
 
-**Your differentiation:** All 5 papers operate on single-timepoint data. Your temporal reasoning adds the **time dimension** for acute care.
+**Game-changer (ACE):** Contexts should be **evolving playbooks**, not static instructions. Open-source DeepSeek + ACE matches proprietary GPT-4.1 agents. Enables **self-improving AI from execution feedback alone**.
+
+**Your differentiation:** Previous papers use single-timepoint data. Your temporal reasoning adds the **time dimension**. ACE adds **self-improvement** — your system should have evolving temporal playbooks that learn from patient outcomes.
 
 ---
 
